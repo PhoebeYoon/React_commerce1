@@ -20,8 +20,9 @@ prop(properties의 줄임말)와 state는 일반 자바스크립트 객체다. �
 const Home = () => {
   let name ='Hong Gi lDong';
   const handleClick =()=>{
+    console.log('before ', name);
     name ="Kim Gil Dong";
-    console.log(name)
+    console.log('after ',name);
   }
 
   return ( 
