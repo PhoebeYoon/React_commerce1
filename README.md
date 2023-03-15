@@ -42,7 +42,62 @@ function App() {
 }
 export default App;
 ```   
-마지막줄에 있는 <b> export default </b> 문장은 해당 컴포넌트를 다른 파일에서 사용하도록 하기위해 꼭 해줘야 하는 문장입니다. 
+마지막줄에 있는 <b> export default </b> 문장은 해당 컴포넌트를 다른 파일에서 사용하도록 하기위해 꼭 해줘야 하는 문장입니다. 그리고 function App(){ return   } 으로 return 문에서 jsx 문을 리턴한다는 것을 기억하십시요. 어디서? App.js 입니다.   
+
+
+여기에 추가해서 변수를 사용해 보도록 하겠습니다.  
+return문 전에 변수를 선언합니다.  
+``` javascript 
+import './App.css';
+function App() {
+  const title ="Welcome to the my blog";
+  return (
+    <div className="App">
+      <div className="content">
+        <h1> App 컴포넌트</h1>
+        <p> {title }</p>
+      </div>
+    </div>
+  );
+}
+export default App;
+``` 
+
+이제 좀 더 다양한 내용을 다루어보겠습니다.   
+``` javascript
+import './App.css';
+function App() {
+  const title ="Welcome to the my blog";
+  const likes =50;
+  // const gender =false;
+  const person = {name:'Kim', age:30};
+
+  return (
+    <div className="App">
+      <div className="content">
+        <h1> App 컴포넌트</h1>
+        <p> {title } | Likes {likes}</p>
+        {/* <p>{ gender }</p>
+        <p>{ person }</p>  이렇게는 출력이 제대로 되질 않습니다. 아래처럼 사용해야 합니다 */}
+        <p>{ person.name }</p>
+        <p> { 10 }</p>
+        <p> { "문자열도 허용됩니다 "}</p>
+        <p>[1,2,3,4,5]</p>
+        <p> { Math.floor(Math.random()*10)}</p>
+      </div>
+    </div>
+  );
+}
+export default App;
+
+
+```    
+
+
+
+
+
+
 
 
 ```
