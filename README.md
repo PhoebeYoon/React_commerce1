@@ -46,6 +46,7 @@ const Navbar = () => {
 }
 export default Navbar;
 
-```   
+```    
+결과는 아래와 같다.   
 <img width="500" alt="스크린샷 2023-03-15 오후 5 48 58" src="https://user-images.githubusercontent.com/48478079/225255977-cc3b3324-bf04-4e4d-85b0-c91c24d8aa7f.png">
 
