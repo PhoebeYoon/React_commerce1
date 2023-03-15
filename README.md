@@ -12,7 +12,7 @@
   <img width="250" alt="스크린샷 2023-03-14 오후 11 28 52" src="https://user-images.githubusercontent.com/48478079/225034615-d4399db6-e5e1-4e84-827a-82ccc9b06c32.png"> <img width="250" alt="스크린샷 2023-03-14 오후 11 29 10" src="https://user-images.githubusercontent.com/48478079/225034630-811c2d41-cc3d-49a2-8d25-f4f4556ba929.png">    
   - vs code > Settings > 검색어: emmet > 그리고 아래와 같이 key에 'javascript' ,Value에 'javascriptreact'를 삽입해줍니다. 이것은 우리가 react 컴포넌트를 사용할때 emmet를 사용하게 해줍니다  
 <img width="297" alt="스크린샷 2023-03-14 오후 11 19 24" src="https://user-images.githubusercontent.com/48478079/225030354-7b123b08-90df-4840-9015-615d6866d5be.png">    
-3. 글로벌 설치   
+3. 글로벌 설치 
 
 ```
 > npm install 모듈이름 -g
@@ -42,7 +42,10 @@
   위의 과정을 거쳐서 나오는 화면은,  
   <img width="173" alt="스크린샷 2023-03-15 오전 11 26 42" src="https://user-images.githubusercontent.com/48478079/225188944-5d2f3464-7fc0-4b52-8b39-5821be724d56.png">
 
-  
+5. 설치된 내용 살펴보기 
+📁node_modules
+📁public 📁 index.html   
+📁src📁App.js , index.js  
   
   
   
