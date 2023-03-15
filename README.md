@@ -1,6 +1,6 @@
 ###### 🌵 React_Tutorial_Part1
 
-## Using state 
+## state 
 prop(properties의 줄임말)와 state는 일반 자바스크립트 객체다. 두 객체 모두 렌더링 결과물에 영향을 주는 정보를 갖고 있는데 한 가지 중요한 방식에서 차이가 있다. props는 (함수 매개변수처럼) 컴포넌트에 전달되는 반면 state는 (함수 내 선언된 변수처럼) 컴포넌트 안에서 관리한다
 
 
