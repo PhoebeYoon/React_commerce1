@@ -39,6 +39,9 @@
   > cd mini-blog
   > code .
   ```    
+  위의 과정을 거쳐서 나오는 화면은,  
+  <img width="173" alt="스크린샷 2023-03-15 오전 11 26 42" src="https://user-images.githubusercontent.com/48478079/225188944-5d2f3464-7fc0-4b52-8b39-5821be724d56.png">
+
   
   
   
