@@ -20,4 +20,6 @@ body {   background-color: beige; }
 
 이제 새로운 스타일을 적용해보자
 App.js 파일에서 App.css 를 제거하고   
-index.css 파일의 내용을 첨부된 내용으로 바꿔보자 
+index.css 파일의 내용을 첨부된 내용으로 바꿔보자. 아래와 같은 결과화면을 얻는다.  
+
+<img width="530" alt="스크린샷 2023-03-15 오후 5 38 17" src="https://user-images.githubusercontent.com/48478079/225253363-eb93b6b1-6a93-4ee3-bd63-871b4f1dce59.png">
