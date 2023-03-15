@@ -23,3 +23,29 @@ App.js 파일에서 App.css 를 제거하고
 index.css 파일의 내용을 첨부된 내용으로 바꿔보자. 아래와 같은 결과화면을 얻는다.  
 
 <img width="530" alt="스크린샷 2023-03-15 오후 5 38 17" src="https://user-images.githubusercontent.com/48478079/225253363-eb93b6b1-6a93-4ee3-bd63-871b4f1dce59.png">
+
+
+Navbar.js에 스타일을 입혀볼건데, 스타일에 '{{ }}'를 사용할 것이다.   
+바깥쪽 {다이나믹 value}은 리액트에게 우리가 스타일속성을 위한 다이나믹 value를 사용할거라고 알려주는 것이고, 안쪽 { 자바스크립트 오브젝트 } 는 자바스크립트 오브젝트이다.  css 문법이 아니라 jsx 문법에 따라 속성을 적어야 한다.  
+[ Navbar.js ]   
+``` javascript 
+const Navbar = () => {
+  return ( 
+    <nav className="navbar">
+      <h1>The Nobody's Blog</h1>
+      <div className="links">
+        <a href="/"> Home</a> | 
+        <a href="/create" style={{ 
+          color:"white", 
+          backgroundColor:'#f1356d',
+          borderRadius:'4px'
+          }}> New Blog</a>
+      </div>
+    </nav>
+   );
+}
+export default Navbar;
+
+```   
+<img width="500" alt="스크린샷 2023-03-15 오후 5 48 58" src="https://user-images.githubusercontent.com/48478079/225255977-cc3b3324-bf04-4e4d-85b0-c91c24d8aa7f.png">
+
