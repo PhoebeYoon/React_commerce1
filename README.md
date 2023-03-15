@@ -42,12 +42,14 @@
   위의 과정을 거쳐서 나오는 화면은,  
   <img width="173" alt="스크린샷 2023-03-15 오전 11 26 42" src="https://user-images.githubusercontent.com/48478079/225188944-5d2f3464-7fc0-4b52-8b39-5821be724d56.png">
 
-5. 설치된 내용 살펴보기 ( 중요한 폴더만 잠시 보도록 )      
+5. 설치된 내용 살펴보기 ( 중요한 폴더만 잠시 보겠습니다)      
 📁node_modules   
 📁public 📁 index.html   
 📁src📁App.js , index.js   
-
-  
+어느 폴더에 무슨 파일이 있는지만 확인하세요  
+그리고 index.html 파일을 열어서  ``` <div id="root"></div> ``` 눈여겨 보시고요.
+index.js 파일을 열어서 내용을 눈여겨 보시면 됩니다.  
+ㄷ
   
   
   
