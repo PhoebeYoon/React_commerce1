@@ -41,6 +41,7 @@ const Home = () => {
 export default Home;
 ```  
 결과를 보면 콘솔창에 'Kim Gil Dong'이 찍히고 'Hong Gil Dong'값이 handleClick함수로 전달되질 않습니다.  
-그래서 Hook(훅)이라는 것을 사용해야 하는데,  Hook의 useState를 사용합니다. 
-Hook이란 함수형 컴포넌트에서 사용되는 state와 관련된 기술을 모아서 일컫는 말로, React state와 생명주기 기능을 연동할 수 있게 해주는 함수입ㄴ디ㅏ. 
+그래서 Hook(훅)이라는 것을 사용해야 하는데,  Hook은 리액트에서 제공하는 함수입니다. 
+그리고 지역변수처럼 사용했던 변수들을 useState를 사용하여 state(상태)로 만들어줍니다. state란 컴포넌트안에 있는 데이터 또는 정보를 포함하고 있는 리액트 내장객체입니다. 그러니까 컴포넌트안에 있는 어떤것들이 있는지 알고 싶으면 이 state를 뒤지면 알수 있다는 얘기죠. 그리고 useState는 배열을 리턴합니다. 
+
 
