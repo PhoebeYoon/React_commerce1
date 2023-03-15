@@ -24,10 +24,28 @@ jsx는 React엘리먼트를 만들고 React엘리먼트는 브라우저 DOM를 �
 (참고로 jsx를 사용하지 않고도 react를 만들 수 있지만 jsx를 사용하는 것이 개발하기 쉬우니까 사용하는거겠죠! )
 
 이전 수업에서 웹브라우저의 개발자도구와 vscode로 App.js 내용을 비교한 그림, 기억나시나요?   
-거기에 보면 App.js에는 ``` <div className="App"> ~ ``` 로 되어 있는데 개발자도구에는 ``` <div class="App"> ~ ``` 로 되어 있었습니다. jsx 문법에 따라 className이라고 했는데 실제 브라우저의 DOM으로 랜더링해서 보니 class로 변경되어 html 문법에 맞춰서 들어가 있었습니다.  
+거기에 보면 App.js에는 ``` <div className="App"> ~ ``` 로 되어 있는데 개발자도구에는 ``` <div class="App"> ~ ``` 로 되어 있었습니다.   
+jsx 문법에 따라 className이라고 했는데 실제 브라우저의 DOM으로 랜더링해서 보니 class로 변경되어 html 문법에 맞춰서 들어가 있었습니다.  
+
+아래와 같이 수정하겠습니다.  
+[App.js]
+``` javascript
+import './App.css';
+function App() {
+  return (
+    <div className="App">
+      <div className="content">
+        <h1> App 컴포넌트</h1>
+      </div>
+    </div>
+  );
+}
+export default App;
+```   
+마지막줄에 있는 <b> export default </b> 문장은 해당 컴포넌트를 다른 파일에서 사용하도록 하기위해 꼭 해줘야 하는 문장입니다. 
 
 
-
+```
 public: create-react-app으로 개발할 React 프로젝트의 Static 파일들(index.html 등)이 저장된 폴더입니다.
 public/index.html: 개발한 React 프로젝트가 표시될 파일
 src: 실제 React를 사용하여 개발을 할 때 사용하는 폴더입니다.
@@ -37,4 +55,5 @@ src/App.css: App 컴포넌트에서 사용하는 CSS 파일
 src/App.test.js: App 컴포넌트를 테스트하기 위한 파일
 src/reportWebVitals.js: React의 성능을 측정하기 위한 파일
 src/setupTests.js: React에서 테스트를 실행하기 위한 설정 파일
-package.json: 개발에 필요한 라이브러리를 관리하는 파일입니다.
+package.json: 개발에 필요한 라이브러리를 관리하는 파일입니다.  
+```
