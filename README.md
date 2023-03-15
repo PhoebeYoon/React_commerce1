@@ -51,8 +51,8 @@ export default App;
 해당 프로젝트폴더에서 :file_folder:node_modules 를 삭제해 봅니다.
 그리고 ```  npm run start  ```  를 실행하면 실행되질 않습니다. 이유는 node_modules에는 어플리케이션에 필요한 각종 모듈이 들어있는데 이걸 삭제했으니 실행이 당연히 되질 않는것입니다.   
 
-또 다른 사람의 레포지토리에서 다른 프로젝트를 다운로드 받아서 보면 node_modules폴더는 없습니다. 내용이 너무 많고 크기때문에 레포지토리에 올려놓질 않는것입니다. 그렇다면 어떻게해야 할까요?
-터미널에서 ``` > npm install   ```   합니다. 그러면 node_modules폴더가 생성이 되는데 이때 package.json 파일안에 있는 ' "dependencies" ' 내용을 참조해서 설치됩니다. 
+또 다른 사람의 레포지토리에서 다른 프로젝트를 다운로드 받아서 보면 node_modules폴더는 없습니다. 내용이 너무 많고 크기때문에 레포지토리에 올려놓질 않는것입니다. 그렇다면 어떻게해야 할까요?   
+터미널에서 ``` > npm install  ```   합니다. 그러면 node_modules폴더가 생성이 되는데 이때 package.json 파일안에 있는 ' "dependencies" ' 내용을 참조해서 설치됩니다. 
 
-설치가 끝났다면  ```  npm run start  ```  하면 실행되는것을 확인할수 있습니다.
+설치가 끝났다면  ```  npm run start  ```  실행되는것을 확인할수 있습니다.
 
