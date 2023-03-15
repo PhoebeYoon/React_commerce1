@@ -49,7 +49,7 @@ useState는 배열을 리턴하는데
 [ a , b ] = useState('알고싶은 얘')   
 이렇게하면 '알고싶은 얘'의 'a'에는 알고싶은 얘가 뭘 갖고 있는지를, b에는 어떻게 바꿀지를 지정해주면 되는데 바꿀때는 b('변경할내용')를 적어줍니다  
 
-위의 코드를 이렇게 바꾸면 됩니다. 위에 설명한 a,b 대신 name, setName 이라고 바꿨습니다
+위의 코드를 이렇게 바꾸면 됩니다. 위에 설명한 a,b 대신 name, setName을 사용했습니다.  
 ``` javascript
 import {useState} from 'react'
 const Home = () => {
