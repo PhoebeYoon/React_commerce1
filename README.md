@@ -1,4 +1,4 @@
-# React_Tutorial_Part1
+###### :cactus: React_Tutorial_Part1
 
 ## React를 실습하기 위한 환경만들기
   1. node.js 설치
