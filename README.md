@@ -47,6 +47,30 @@ useState는 배열을 리턴하는데
 배열의 첫번째 요소는 상태의 값을 읽을때 사용하고  
 배열의 두번째 요소는 그 상태의 값을 변경할 때 사용하는 함수입니다. 이것을 다시 정리하면,  
 [ a , b ] = useState('알고싶은 얘')   
-이렇게하면 '알고싶은 얘'의 'a'에는 알고싶은 얘가 뭘 갖고 있는지를, b에는 어떻게 바꿀지를 지정해주면 되는 것입니다. 
+이렇게하면 '알고싶은 얘'의 'a'에는 알고싶은 얘가 뭘 갖고 있는지를, b에는 어떻게 바꿀지를 지정해주면 되는데 바꿀때는 b('변경할내용')를 적어줍니다  
+
+위의 코드를 이렇게 바꾸면 됩니다. 
+``` javascript
+import {useState} from 'react'
+const Home = () => {
+  // let name ='Hong Gil Dong';
+  const [name, setName ]=useState('Hong Gil Dong')
+  const handleClick =()=>{
+     console.log(name)
+      setName('Kim Gil Dong')
+  }
+  return ( 
+    <div className="home">
+      <h2>Home </h2>
+      <p>{name}</p>
+      <button onClick={handleClick}>Click here</button> 
+    
+    </div>
+   );
+}
+export default Home;
+
+```   
+
 
 
