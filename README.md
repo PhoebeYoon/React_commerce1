@@ -75,7 +75,7 @@ index.css의 내용을 추가해 주세요
 4. Home.js파일에는 아까 오려두기 했던 같은 곳에 ``` <BlogList />  ``` 를 입력하면 같은 파일 위쪽에 ``` import BlogList from "./BlogList"; ``` 이 자동으로 입력됩니다. 
 5. 여기까지 하면 에러가 발생합니다. 왜냐하면 blogs의 내용은 Home.js에 있는데 list 로 만드는 것은 BlogList.js 파일에서 해주는데 BlogList.js 파일에는 blogs의 내용이 없기 때문입니다. 그래서 blogs의 내용을 BlogList.js에 전달해줘야 합니다.
 6. 그래서 여기서 그 유명한 props를 사용하면 되는 것입니다. Home.js 파일의 ``` <BlogList props="{blogs}"/> ``` 바꿔줍니다. 
-7.    
+7. BlogList.js파일에서 ``` const BlogList() => { ```   에 Home.js에서 전해준 인자를 받아야 하니까 괄호안에 props라는 인자를 넣어줍니다.  그리고 이것을 콘솔창에 출력해보십시오. 
 
 
 
