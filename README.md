@@ -66,7 +66,16 @@ index.css의 내용을 추가해 주세요
 <img width="268" alt="스크린샷 2023-03-16 오전 11 39 00" src="https://user-images.githubusercontent.com/48478079/225496181-1b5157bb-967e-4a5f-a8b0-c577f825130b.png">
 
 
+## blog list를 만들어보자   
+위의 내용중에서 blogs의 내용을 가져와 map()으로 반복하는것을 새로운 블로그 내용이 생길때마다 반복해야 하므로 이런 내용을 하나의 컴포넌트로 만들어서 관리해 보도록 하겠습니다.  
 
+1. BlogList.js 생성, sfc 엔터 (기본태그들 입력) 
+2. 기본태그 안에 return 안에 ```<div className="blog-list"> </div>  ``` 생성한다 그리고 
+3. Home.js파일안의 ``` blogs.map ~~  ``` 오려두기 하여 BlogList.js안의 .blog-list 안에 붙여넣기 합니다 
+4. Home.js파일에는 아까 오려두기 했던 같은 곳에 ``` <BlogList />  ``` 를 입력하면 같은 파일 위쪽에 ``` import BlogList from "./BlogList"; ``` 이 자동으로 입력됩니다. 
+5. 여기까지 하면 에러가 발생합니다. 왜냐하면 blogs의 내용은 Home.js에 있는데 list 로 만드는 것은 BlogList.js 파일에서 해주는데 BlogList.js 파일에는 blogs의 내용이 없기 때문입니다. 그래서 blogs의 내용을 BlogList.js에 전달해줘야 합니다.
+6. 그래서 여기서 그 유명한 props를 사용하면 되는 것입니다. Home.js 파일의 ``` <BlogList props="{blogs}"/> ``` 바꿔줍니다. 
+7.    
 
 
 
