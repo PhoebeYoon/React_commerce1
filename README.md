@@ -1,6 +1,28 @@
 ###### 🌵 React_Tutorial_Part1
 
-## 버튼을 클릭했을때 해당 글을 삭제해보자  
+## 버튼을 클릭했을때 해당 글을 삭제해보자   
+
+이번 수업은 함수를 매개변수로 전달하는 것을 다룰 예정입니다. 이전 수업인 'lesson06-click'를 한번 보시고 오시면 좋을듯합니다.   
+[ BlogList.js ] 에 
+``` javascript 
+// return문 위에 삽입하세요 
+const handleDelete=()=>{
+  alert('okay')
+ } 
+ ...
+<button onClick={handleDelete()}>Delete</button> 
+```  
+이렇게하면 웹페이지를 로드하자마자 alert문이 실행됩니다. 클릭이벤트에 의해 alert문을 실행하려면   
+``` <button onClick={()=>{ handleDelete()}}>Delete</button>  ```   
+이와 같이 해야합니다 ( lesson06의 내용입니다 ) 
+
+
+
+
+
+
+
+
 
 [ BlogList.js ]
 ``` javascript
