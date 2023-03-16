@@ -98,7 +98,7 @@ export default BlogList;
 ```   
 이것은 Home.js에서 전달받은 내용을 'props'라는 인자로 받아서 바로 이 props에서 내용을 추출하는 것과 그렇지 않은것을 비교한 것입니다.  
 위의 문장에  
-``` const blogs = props.blogs; ``` 이 있는데, 언뜻보면 Home.js에서 blogs을 보냈으니 그냥 props.title 뭐 이런식으로 사용하면 안되나 싶지만 그렇게 하면 데이터를 추출할 수 없습니다. 그래서 이 문장을 사용하즌 것입니다.  
+``` const blogs = props.blogs; ``` 이 있는데, 언뜻보면 Home.js에서 blogs을 보냈으니 그냥 props.title 뭐 이런식으로 사용하면 안되나 싶지만 그렇게 하면 데이터를 추출할 수 없습니다. 그래서 이 문장을 사용하는 것입니다.  
 <img width="498" alt="스크린샷 2023-03-16 오후 1 04 15" src="https://user-images.githubusercontent.com/48478079/225512294-2f1eeddd-e3ee-4cc7-8580-1228db78434b.png">
 
 출력결과입니다.   
