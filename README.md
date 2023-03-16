@@ -85,5 +85,5 @@ const handleDelete = (id)=>{
 ```
 에서는 filter()함수로 전달된 id를 제외한 내용을 newBlogs로 집어넣고 이것을 setBlog()를 이용하여 새로운 blogs를 만드는 것입니다. 그리고 ``` <BlogList>``` 태그에서 'handleDelete'함수를 매개변수로 전달합니다.    
 BlogList.js파일에 콘솔로 ```  console.log(title, handleDelete)  ``` 를 출력해보면 Home.js에서 정의한 함수내용이 출력됩니다.  
-  
+완성된 코드에서 보면 handleRemove속성의 값으로 함수 handleDelete가 전달되는 것을 알 수 있습니다.   
 
