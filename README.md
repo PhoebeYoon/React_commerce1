@@ -120,6 +120,17 @@ const BlogList = (props) => {
    ); }
 export default BlogList;
 ```
+## porps 더 알아보기
+[ Home.js ]
+```  <BlogList blogs={blogs} title="All Blogs"/>  ``` 를 추가합니다. 그리고   
+[ BlogList.js ]  
+console.log(props.title)를 추가합니다. 이때 ``` const BlogList = (props) => { ``` 에 내용을 추가할 필요는 없습니다.  
+콘솔창에 'All Blogs' 가 출력됩니다. 아래처럼 변경해주세요   
+``` 
+    <div className="blog-list">
+      <h2>{props.title}</h2>
+```
+
 
 
 
