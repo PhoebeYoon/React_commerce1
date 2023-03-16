@@ -15,7 +15,7 @@ const Home = () => {
  ])
   return ( 
     <div className="home">
-      blogs.map(() => console.log( ' +  ,'))
+     { blogs.map(() => console.log( ' +  ,'))}
     </div>
    );
 }
