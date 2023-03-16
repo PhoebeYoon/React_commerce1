@@ -77,10 +77,10 @@ index.css의 내용을 추가해 주세요
 8. 콘솔창에  내용일 출력되었다고 props.author 나 props.title 뭐 이렇게 해주면 안됩니다. 왜냐하면 props는 blogs의 전체내용을 가지고 있는 것이고 title은 blogs의 개별 데이터의 속성이니까요
 9. 좀 헷갈리기 쉬운 것을 콘솔창에서 확인하도록 하겠습니다. 아래의 코드를 실행시켜보세요   
 ``` javascript   
-const BlogList = (props) => {
-  const blogs = props.blogs;
-  console.log('props --> ' , props)
-  console.log('props blogs -->' , props.blogs)
+const BlogList = (item) => {
+  const blogs = item.props;
+  console.log('props --> ' ,item)
+  console.log('props blogs -->' ,blogs)
   return (  
     <div className="blog-list">
       {
