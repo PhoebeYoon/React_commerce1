@@ -69,7 +69,7 @@ index.css의 내용을 추가해 주세요
 ## blog list를 만들어보자   
 위의 내용중에서 blogs의 내용을 가져와 map()으로 반복하는것을 새로운 블로그 내용이 생길때마다 반복해야 하므로 이런 내용을 하나의 컴포넌트로 만들어서 관리해 보도록 하겠습니다.  
 
-1. BlogList.js 생성, sfc 엔터 (기본태그들 입력) 
+1. BlogList.js 생성, sfc 엔터 (기본태그들 입력) -> const BlogList로 지정해 줍니다 
 2. 기본태그 안에 return 안에 ```<div className="blog-list"> </div>  ``` 생성한다 그리고 
 3. Home.js파일안의 ``` blogs.map ~~  ``` 오려두기 하여 BlogList.js안의 .blog-list 안에 붙여넣기 합니다 
 4. Home.js파일에는 아까 오려두기 했던 같은 곳에 ``` <BlogList />  ``` 를 입력하면 같은 파일 위쪽에 ``` import BlogList from "./BlogList"; ``` 이 자동으로 입력됩니다. 
