@@ -6,8 +6,8 @@
 
 [ BlogList.js ]
 ``` javascript
-const BlogList = ({blogs, title, handleDelete}) => { 
-  // console.log(handleDelete)
+const BlogList = ({blogs, title, handleRemove}) => { 
+  // console.log(handleRemove)
   return ( 
     <div className="blog-list">
       <h2>{title}</h2>
@@ -16,7 +16,7 @@ const BlogList = ({blogs, title, handleDelete}) => {
           <h2>{blog.title}</h2>
           <p>{blog.body}</p>
           <p>{blog.author}</p>
-          <button onClick={()=> handleDelete(blog.id)}>Remove article</button>
+          <button onClick={()=> handleRemove(blog.id)}>Remove article</button>
           </div>
         ))}
     </div>
@@ -42,7 +42,7 @@ const handleDelete = (id)=>{
 }
  return ( 
   <div className="home">
-      <BlogList blogs={blogs} title="All Blogs!" handleDelete={handleDelete}/>
+      <BlogList blogs={blogs} title="All Blogs!" handleRemove={handleDelete}/>
   </div>
  );
 }
