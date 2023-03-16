@@ -150,3 +150,18 @@ export default BlogList;
 ```   
 화면이 제대로 나오는지 확인합니다.   
 <img width="280" alt="스크린샷 2023-03-16 오후 2 20 11" src="https://user-images.githubusercontent.com/48478079/225522103-42cbbd97-cfc1-418d-a6d1-2f542b83b678.png">
+
+## BlogList태그를 여러개 사용해보기
+[ Home.js ]   
+
+이번에는 '<BlogList>' 태그를 여러개 사용해보면서 조건을 주다면 어떻게 할까?   
+blog의 author가 'Kim' 인것만 출력하고자 한다면,   
+``` javascript 
+   <BlogList blogs={blogs} title="All Blogs!"/>
+   <BlogList blogs={blogs.filter((blog)=> blog.author ==='Kim')} title="Kim's Blogs"/>
+ ```   
+ filter()함수를 사용해서 해결하면 된다. 혹시 이렇게  사용하면 작동하지 않습니다   
+``` <BlogList blogs={blogs.blog.author =='Kim'} title="Nobody's blogs"/> ``` 
+ 
+
+
