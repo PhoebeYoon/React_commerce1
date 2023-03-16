@@ -125,13 +125,29 @@ export default BlogList;
 ```  <BlogList blogs={blogs} title="All Blogs"/>  ``` 를 추가합니다. 그리고   
 [ BlogList.js ]  
 console.log(props.title)를 추가합니다. 이때 ``` const BlogList = (props) => { ``` 에 내용을 추가할 필요는 없습니다.  
-콘솔창에 'All Blogs' 가 출력됩니다. 아래처럼 변경해주세요   
+콘솔창에 'All Blogs' 가 출력됩니다. 확인이 되었다면 아래처럼 변경한 후에 결과를 확인해주세요    
 ``` 
     <div className="blog-list">
       <h2>{props.title}</h2>
 ```
 
-
-
-
-
+실습했던 내용 중에서 BlogList.js에서 전달받는 인자를 이렇게 변경해 보겠습니다.  
+``` javascript
+const BlogList = ({blogs, title}) => {
+  // const blogs = props.blogs;
+  // console.log(props.title)
+  return ( 
+    <div className="blog-list">
+      <h2>{title}</h2>
+      { blogs.map((blog)=>(
+          <div className="blog-preview" key={blog.id}> 
+          <h2>{blog.title}</h2>
+          <p>{blog.body}</p>
+          <p>{blog.author}</p>
+          </div>
+        ))}
+    </div>
+   ); }
+export default BlogList;
+```   
+화면이 제대로 나오는지 확인합니다.
