@@ -150,4 +150,5 @@ const BlogList = ({blogs, title}) => {
    ); }
 export default BlogList;
 ```   
-화면이 제대로 나오는지 확인합니다.
+화면이 제대로 나오는지 확인합니다.   
+<img width="320" alt="스크린샷 2023-03-16 오후 2 20 11" src="https://user-images.githubusercontent.com/48478079/225522103-42cbbd97-cfc1-418d-a6d1-2f542b83b678.png">
