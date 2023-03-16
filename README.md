@@ -61,6 +61,10 @@ index.css의 내용을 추가해 주세요
     margin-bottom: 8px;
   }
 ```    
+결과화면은 아래와 같은지 확인하세요  
+
+<img width="268" alt="스크린샷 2023-03-16 오전 11 39 00" src="https://user-images.githubusercontent.com/48478079/225496181-1b5157bb-967e-4a5f-a8b0-c577f825130b.png">
+
 
 
 
