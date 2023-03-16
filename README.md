@@ -73,12 +73,53 @@ index.css의 내용을 추가해 주세요
 2. 기본태그 안에 return 안에 ```<div className="blog-list"> </div>  ``` 생성한다 그리고 
 3. Home.js파일안의 ``` blogs.map ~~  ``` 오려두기 하여 BlogList.js안의 .blog-list 안에 붙여넣기 합니다 
 4. Home.js파일에는 아까 오려두기 했던 같은 곳에 ``` <BlogList />  ``` 를 입력하면 같은 파일 위쪽에 ``` import BlogList from "./BlogList"; ``` 이 자동으로 입력됩니다. 
-5. 여기까지 하면 에러가 발생합니다. 왜냐하면 blogs의 내용은 Home.js에 있는데 list 로 만드는 것은 BlogList.js 파일에서 해주는데 BlogList.js 파일에는 blogs의 내용이 없기 때문입니다. 그래서 blogs의 내용을 BlogList.js에 전달해줘야 합니다.
+5. 여기까지 하면 에러가 발생합니다. 왜냐하면 blogs의 내용은 Home.js에 있는데 BlogList.js 파일에는 blogs의 내용이 없기 때문입니다. blogs의 내용을 BlogList.js에 전달해줘야 합니다.
 6. 그래서 여기서 그 유명한 props를 사용하면 되는 것입니다. Home.js 파일의 ``` <BlogList props="{blogs}"/> ``` 바꿔줍니다. 
-7. BlogList.js파일에서 ``` const BlogList() => { ```   에 Home.js에서 전해준 인자를 받아야 하니까 괄호안에 props라는 인자를 넣어줍니다.  그리고 이것을 콘솔창에 출력해보십시오. 
+7. BlogList.js파일에서 ``` const BlogList() => { ```   에 Home.js에서 전해준 인자를 받아야 하니까 괄호안에 props라는 인자를 넣어줍니다.  blogs.map()의 내용은 잠시 주석처리하고 콘솔창에 출력해보십시오. blogs의 내용이 출력됩니다. 
+8. 콘솔창에  내용일 출력되었다고 props.author 나 props.title 뭐 이렇게 해주면 안됩니다. 왜냐하면 props는 blogs의 전체내용을 가지고 있는 것이고 title은 blogs의 개별 데이터의 속성이니까요
+9. 좀 헷갈리기 쉬운 것을 콘솔창에서 확인하도록 하겠습니다. 아래의 코드를 실행시켜보세요   
+``` javascript   
+const BlogList = (props) => {
+  const blogs = props.blogs;
+  console.log('props --> ' , props)
+  console.log('props blogs -->' , props.blogs)
+  return (  
+    <div className="blog-list">
+      {
+        blogs.map((blog)=> (
+          <p key={blog.id} > { blog.title }</p>
+        ))
+    }
+    </div>
+  );
+}
+export default BlogList;
 
+```   
+이것은 Home.js에서 전달받은 내용을 'props'라는 인자로 받아서 바로 이 props에서 내용을 추출하는 것과 그렇지 않은것을 비교한 것입니다.  
+위의 문장에  
+``` const blogs = props.blogs; ``` 이 있는데, 언뜻보면 Home.js에서 blogs을 보냈으니 그냥 props.title 뭐 이런식으로 사용하면 안되나 싶지만 그렇게 하면 데이터를 추출할 수 없습니다. 그래서 이 문장을 사용하즌 것입니다.  
+<img width="498" alt="스크린샷 2023-03-16 오후 1 04 15" src="https://user-images.githubusercontent.com/48478079/225512294-2f1eeddd-e3ee-4cc7-8580-1228db78434b.png">
 
-
+출력결과입니다.   
+이제 코드를 완성해보도록 하겠습니다.   
+``` javascript 
+const BlogList = (props) => {
+  const blogs = props.blogs;
+  console.log(blogs)
+  return ( 
+    <div className="blog-list">
+      { blogs.map((blog)=>(
+          <div className="blog-preview" key={blog.id}> 
+          <h2>{blog.title}</h2>
+          <p>{blog.body}</p>
+          <p>{blog.author}</p>
+          </div>
+        ))}
+    </div>
+   ); }
+export default BlogList;
+```
 
 
 
