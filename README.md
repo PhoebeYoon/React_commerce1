@@ -87,6 +87,9 @@ const BlogList = ({blogs, title}) => {
 export default BlogList;
 ```    
 
-변경해줍니다.   Home.js 에서 ```  { blogs && <BlogList blogs={blogs} title="All Blogs!" /> } ``` 에 대해 잠시 살펴보겠습니다. ```blog && ```들어간 이유는  json 파일에서 내용을 읽어와 blogs에 넣어주기 전에 먼제 BlogList.js 파일의 map()이 실행이 됩니다. 그래서 에러를 발생합니다. 이것을 방지하기 위해 && 연산자를 넣어서 blogs의 내용이 참이 될때까지 잠시 기다리게 한 것입니다. 
+변경해줍니다.   
+Home.js 에서 ```  { blogs && <BlogList blogs={blogs} title="All Blogs!" /> } ``` 에 대해 잠시 살펴보겠습니다.   
+```blog && ```들어간 이유는  json 파일에서 내용을 읽어와 blogs에 넣어주기 전에 먼제 BlogList.js 파일의 map()이 실행이 됩니다. 그래서 에러를 발생합니다.   
+이것을 방지하기 위해 && 연산자를 넣어서 blogs의 내용이 참이 될때까지 잠시 기다리게 한 것입니다. 
  
 
