@@ -91,5 +91,44 @@ export default BlogList;
 Home.js 에서 ```  { blogs && <BlogList blogs={blogs} title="All Blogs!" /> } ``` 에 대해 잠시 살펴보겠습니다.   
 ```blog && ```들어간 이유는  json 파일에서 내용을 읽어와 blogs에 넣어주기 전에 먼제 BlogList.js 파일의 map()이 실행이 됩니다. 그래서 에러를 발생합니다.   
 이것을 방지하기 위해 && 연산자를 넣어서 blogs의 내용이 참이 될때까지 잠시 기다리게 한 것입니다. 
+
+결과를 확인해 주세요. 
+
+그럼 이번에는 바로 위의 내용에서 json 파일을 읽어오는 동안 'Loading...' 메시지를 내보내도록 변경해 보겠습니다. 
+이를 위해 useState()를 사용해서 파일을 불려오기전에는 false 로, 파일을 불러와서 blogs에 내용을 넣은후에는 true로 바꿈으로 제어해 보도록 하겠습니다. 
+
+``` javascript
+import { useEffect, useState } from "react"; 
+import BlogList from "./BlogList";
+
+const Home = () => {
+ const [blogs, setBlog] = useState(null);
+ const [isPending, setIsPending] = useState(true);
+
+ useEffect(()=>{
+  fetch('http://localhost:8000/blogs').then(res => {
+    return res.json()
+  }).then(data =>{ 
+    setBlog(data);
+    setIsPending(false);
+  })
+},[]);
+
+ return ( 
+  <div className="home">
+    {isPending && <div>Loading... </div>}
+    { blogs && <BlogList blogs={blogs} title="All Blogs!" /> }
+    
+  </div>
+ );
+}
+export default Home;
+
+```   
+
+
+
+
+
  
 
