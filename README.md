@@ -83,6 +83,7 @@ function App() {
         <p> { 10 }</p>
         <p> { "문자열도 허용됩니다 "}</p>
         <p>[1,2,3,4,5]</p>
+        <p>{ <span> span 태그입니다 </span>} </p>
         <p> { Math.floor(Math.random()*10)}</p>
       </div>
     </div>
