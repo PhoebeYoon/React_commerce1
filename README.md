@@ -23,3 +23,16 @@ http://localhost:8000/blogs
 /blogs/{id}   POST      Delete a blog
 ```   
 
+Home.js파일을 다운로드 받아서  
+
+```  
+useEffect(()=>{
+  fetch(' http://localhost:8000/blogs').then(res => {
+    return res.json()
+  }).then(data =>{ 
+    //console.log(data)
+    setBlog(data)
+  })
+},[]);
+```   
+위와 같이 변경해줍니다
