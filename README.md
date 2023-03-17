@@ -7,13 +7,15 @@
 
 새로운 터미널창을 열고   
 맥사용자는 , 
-``` >  sudo npx json-server --watch data/db.json --port 8000 ```   
+``` >sudo npx json-server --watch data/db.json --port 8000 ```   
 윈도우 사용자는 앞의 'sudo'를 빼고 실행합니다.  그럼    
 ```   
 Resources
 http://localhost:8000/blogs
 ```   
-터미널창에 이런 것이 보일것이다. 클릭해 보면 json파일의 내용이 보일것이다.   
+터미널창에 이런 것이 보일것이다. 클릭해 보면 json파일의 내용이 보일것이다.    
+db.json 를 다시 실행해야 할때는  ``` >sudo npx json-server --watch data/db.json --port 8000 ```  
+
 
 잠시 여기서 endpoints를 보겠습니다.   
 ```  
