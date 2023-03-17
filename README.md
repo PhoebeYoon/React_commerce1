@@ -95,8 +95,8 @@ Home.js 에서 ```  { blogs && <BlogList blogs={blogs} title="All Blogs!" /> } `
 결과를 확인해 주세요. 
 
 그럼 이번에는 바로 위의 내용에서 json 파일을 읽어오는 동안 'Loading...' 메시지를 내보내도록 변경해 보겠습니다. 
-이를 위해 useState()를 사용해서 파일을 불려오기전에는 false 로, 파일을 불러와서 blogs에 내용을 넣은후에는 true로 바꿈으로 제어해 보도록 하겠습니다. 
-
+이를 위해 useState()를 사용해서 파일을 불려오기전에는 false 로, 파일을 불러와서 blogs에 내용을 넣은후에는 true로 바꿈으로 제어해 보도록 하겠습니다.   
+[ Home.js ]   
 ``` javascript
 import { useEffect, useState } from "react"; 
 import BlogList from "./BlogList";
@@ -124,8 +124,26 @@ const Home = () => {
 }
 export default Home;
 
-```   
+```    
+Loading... 이 빨리 지나가버리니 못 볼수도 있다는 점 참고하세요.    
 
+
+이제 코드를 좀 간소화하겠습니다. useEffect()의 내용을 변경해보겠습니다.  setTimeout()함수를 이용하여 Loading... 이 1초동안 유지된후에 데이타들이 fetch 되도록 바꿔보겠습니다. 
+useEffect()를 아래와 같이 변경해줍니다 
+
+``` javascript   
+useEffect(()=>{
+   setTimeout( ()=>{
+    fetch('http://localhost:8000/blogs')
+    .then(res => {
+        return res.json()
+    }).then(data =>{ 
+        setBlog(data);
+        setIsPending(false);
+    })
+    } , 1000);
+},[]);
+```
 
 
 
