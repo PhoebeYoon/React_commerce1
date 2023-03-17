@@ -40,3 +40,27 @@ useEffect(()=>{
 },[]);
 ```
 결과를 확인하세요.  
+
+이제 [] 안에 useEffect를 트리거 시키는 state value를  넣어보겠습니다  
+```javascript
+const [name, setName] = useState('Kim')
+
+useEffect(()=>{
+  console.log('useEffect')
+  console.log(blogs)
+},[name]);
+
+
+ return ( 
+  <div className="home">
+      <BlogList blogs={blogs} title="All Blogs!" handleRemove={handleDelete}/>
+      <button onClick={()=>setName('Smith')}> Change Name</button>
+      <p>{name}</p>
+  </div>
+ );
+
+```   
+이렇게 각각 변경해 주십시요. 결과화면을 보면 삭제버튼을 클릭할때는 여전히 'useEffect' 가 출력되지 않다가 'Change Name' 버튼을 클릭하면 { name }의 값이 변경되면서 'useEffect'가 콘솔창에 출력됩니다.   
+useEffect함수의 두번째 인자로 [name] 를 주었는데, 이는 name이라는 state를 주시하다가 이것이 변경되면 useEffect()를 실행하라는 것입니다 
+
+ 
