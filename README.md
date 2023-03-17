@@ -63,5 +63,50 @@ useEffect(()=>{
 ```    
 에러를 발생시키기 위해 url에서 s를 뺐습니다. 보셨죠!   
 
+이제는 에러처리에 useState()를 사용토록 하겠습니다. 이것은 위츼 내용에서 에러가 났을 때 에러 메시지가 출력되지만 Loading... 이라는 문구는 출력되는 것을 해결한 것입니다.  
+``` javascript
+import { useEffect, useState } from "react"; 
+import BlogList from "./BlogList";
+
+const Home = () => {
+ const [blogs, setBlog] = useState(null);
+ const [isPending, setIsPending] = useState(true);
+ const [error, setError] = useState(null)
+
+ useEffect(()=>{
+   setTimeout( ()=>{
+    fetch('http://localhost:8000/blogs')
+    .then(res => {
+      if(!res.ok){
+        throw Error('데이터를 불러올 수 없습니다 ')
+      }
+      return res.json()})
+    .then(data =>{ 
+        setBlog(data);
+        setIsPending(false);
+        setError(null)
+      })
+    .catch(err =>{
+      setIsPending(false);
+      setError(err.message);
+    })
+    } , 1000);
+},[]);
+ return ( 
+  <div className="home">
+ 
+    {error && <div> {error} </div>}
+    {isPending && <div>Loading... </div>}
+    { blogs && <BlogList blogs={blogs} title="All Blogs!" /> }
+  </div>
+ );
+}
+export default Home;
+
+```   
+
+
+
+
 
 
