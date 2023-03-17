@@ -127,8 +127,8 @@ export default Home;
 ```    
 Loading... 이 빨리 지나가버리니 못 볼수도 있다는 점 참고하세요.    
 
+이번에는 setTimeout()함수를 이용하여 Loading... 이 1초동안 유지된후에 데이타들이 fetch 되도록 바꿔보겠습니다. 
 
-이제 코드를 좀 간소화하겠습니다. useEffect()의 내용을 변경해보겠습니다.  setTimeout()함수를 이용하여 Loading... 이 1초동안 유지된후에 데이타들이 fetch 되도록 바꿔보겠습니다. 
 useEffect()를 아래와 같이 변경해줍니다 
 
 ``` javascript   
