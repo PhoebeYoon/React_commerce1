@@ -18,6 +18,47 @@ import를 하게 되면 자동으로 JSON.parse 함수가 적용된 것 처럼 �
 
 <img width="672" alt="스크린샷 2023-03-17 오후 1 52 20" src="https://user-images.githubusercontent.com/48478079/225815678-a3c9e5a7-8432-416d-8005-d6d4647ba9cb.png">
 
+[ objectData.json ] 
+```
+{
+  "welcomeMessage": "Hello World!",
+  "localAddress": "127.0.0.1",
+  "isDevEnv": true
+}
+```
+
+[ arraryData.json ]
+``` 
+[
+  {
+    "name": "Kevin",
+    "age": "22",
+    "country": "US"
+  },
+  {
+    "name": "Kim",
+    "age": "27",
+    "country": "South Korea"
+  },
+  {
+    "name": "Jeong",
+    "age": "27",
+    "country": "South Korea"
+  },
+  {
+    "name": "Watson",
+    "age": "30",
+    "country": "UK"
+  },
+  {
+    "name": "Carlos",
+    "age": "50",
+    "country": "Mexico"
+  }
+]
+```
+
+
 배열을 담은 JSON 파일의 데이터에 접근할 때는 map() 함수를 이용합니다.
 
 [ App.js ]   
