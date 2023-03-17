@@ -5,10 +5,11 @@
 루트 디렉토리에 :file_folder:data :file_folder:db.json 파일을 생성합니다. 
 그리고 첨부된 내용을 넣어줍니다. 
 
-새로운 터미널창을 열고 
+새로운 터미널창을 열고   
+맥사용자는 , 
 ``` >  sudo npx json-server --watch data/db.json --port 8000 ```   
-실행한다. 그럼 
-``` 
+윈도우 사용자는 앞의 'sudo'를 빼고 실행합니다.  그럼    
+```   
 Resources
 http://localhost:8000/blogs
 ```   
