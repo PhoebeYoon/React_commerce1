@@ -15,3 +15,11 @@ http://localhost:8000/blogs
 ```   
 터미널창에 이런 것이 보일것이다. 클릭해 보면 json파일의 내용이 보일것이다.   
 
+잠시 여기서 endpoints를 보겠습니다.   
+```  
+/blogs        GET       Fetch all blogs
+/blogs/{id}   GET       Fetch a single blogs
+/blogs        POST      Add a new blog
+/blogs/{id}   POST      Delete a blog
+```   
+
