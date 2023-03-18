@@ -44,3 +44,42 @@ function App() {
 export default App;
 ```    
 위에서 언급했듯이 react-router-dom@5 로 버전6이하의 버전을 설치했다면 위의 코드와는 달라질 것이다.    
+여기까지 실행화면을 확인해 보세요.
+
+## 컴포넌트를 하나 더 만들어봅시다
+
+📁src 📁Create.js -> 그 안에서 sfc 엔터   
+[ Create.js ]
+``` javascript 
+const Create = () => {
+  return (  
+    <div className="create">
+      <h2>Add a new Blog</h2>
+    </div>
+  );
+}
+export default Create;
+
+```  
+만들어진 컴포넌트를 App.js에 등록해야 합니다.  
+[App.js]
+```javascript
+  <Routes>
+    <Route path="/" element={<Home /> } ></Route>
+    <Route path="/create" element={<Create /> } ></Route>        
+  </Routes>
+```
+이처럼 변경해 줍니다.   
+url에 : ```  http://localhost:3000/create  ```  해주면 아까 작성한 내용이 보입니다.   
+
+이제 브라우저에서 메뉴에 있는 항목을 잠시 보겠습니다.  Navbar.js 파일을 열어보면  
+```javascript
+<a href="/create" style={{ 
+          color:"white", 
+          backgroundColor:'#f1356d',
+          borderRadius:'4px'
+          }}> New Blog</a>
+```
+여기에서 앵커의 url를 '/create' 로 이미 지정했기 때문에 메뉴를 클릭해서도 새로운 페이지로 이동할 수 있습니다.  
+
+
