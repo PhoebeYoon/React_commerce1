@@ -12,4 +12,35 @@ React Router는 클라이언측 라우팅을 가능하게 합니다. 이게 뭐�
 설치후에 package.json파일을 열어보면  
 "dependencies" 항목에 "react-router-dom": "숫자"가 있을 것입니다.   
 
+### App.js의 내용에 등록하기
+react-router-dom 설치가 되었다면 사용하기 위해 App.js에 이것을 사용하겠다고 등록(불러옴)해야 합니다. 
 
+```import { BrowserRouter, Routes, Route} from 'react-router-dom';  ```   
+추가합니다. 
+주의할 것은 react-router-dom이 버전 6로 업그레이드되면서, Switch를 더이상 지원하지 않는다는 것이다.    
+
+[ App.js ]
+
+```javascript
+import Navbar from './Navbar';
+import Home from './Home'
+import { BrowserRouter, Routes, Route} from 'react-router-dom'; 
+
+function App() {
+  return (
+    <BrowserRouter>
+      <div className="App">
+        <Navbar />
+        <div className="content">
+            <Routes>
+              <Route path="/" element={<Home /> } ></Route>
+
+            </Routes>
+        </div>
+      </div>
+    </BrowserRouter>
+  );
+}
+export default App;
+```    
+위에서 언급했듯이 react-router-dom@5 로 버전6이하의 버전을 설치했다면 위의 코드와는 달라질 것이다.    
