@@ -68,12 +68,66 @@ fetch 객체는 promise 객체를 리턴하는 비동기함수입니다. promise
 
 ## AbortController 
 - AbortController는 signal 이라는 속성(property)과 abort 라는 메소드(method)로 구성되어 있습니다. 
+- signal은 AbortController 인터페이스의 읽기전용 속성으로 AbortSignal 객체의 인스턴스이며 DOM 요청과의 통신 또는 중단하는데 사용됩니다  
 
 1. 선언  
   ``` let controller = new AbortController; ```   
 2. fetch 함수에 signal 파라미터 할당하기  
     ``` fetch(url, { signal: controller.signal }); ```   
 3. abort 함수 호출   
-``` controller.abort(); ```   
+``` controller.abort(); ```    
+
+db.json 파일을 불러올때 에러가 발생한다면 중단시키고자 합니다. fetch()가 취소되면 'AbortError' 라는 'DOMException'를 발생하기 때문에 취소된 오류와 다른 오류를 구분할 수 있습니다. 그래서 아래 catch()에 if문을 추가하여 'AbortError'일때 체크하도록 했습니다. 
+
+[ useFetch.js ]   
+```javascript
+import { useEffect, useState } from 'react';
+
+const useFectch = (url) => {
+  const [data, setData] = useState(null);
+  const [isPending , setPending] = useState(true);
+  const [error, setError] =useState(null);;
+
+
+
+  useEffect(()=>{
+    const abortCont = new AbortController();
+
+    setTimeout(()=>{
+      fetch(url , {signal : abortCont.signal})
+      .then(res =>{ 
+        if(!res.ok){
+          throw Error('데이터를 불러올 수 없습니다')
+        }
+        return res.json()
+      }).then(data =>{
+          setData(data)
+          setPending(false)
+          setError(null)
+      })
+      .catch(err=>{
+        if( err.name ==='AbortError') {
+          console.log('불러오기를 중단합니다')
+        } else {
+          setPending(null)
+          setError(err.message)
+        }
+      })
+    } , 1000);
+    return ()=>{
+      // console.log('clean up');
+      abortCont.abort();
+    }
+    },[url]);
+   
+    return {data, isPending, error}
+}
+ 
+export default useFectch;
+
+```    
+db.json의 연결을 중지하고 페이지를 실행시키면 '데이터를 불러올수 없습니다' 가 콘솔창에 나타납니다.  
+Home.js에서 http의 주소를 ~ /blogss 로 고쳐서 실행하면  문서에는 '데이터를 불러올 수 없습니다' 와 콘솔창에는 '불러오기를 중단합니다' 가 나타납니다.
+
 
 
