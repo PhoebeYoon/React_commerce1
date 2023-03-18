@@ -5,6 +5,7 @@ lesson04에서  잠시 소개되었던 도식화된 이미지를 기억해봅시
 React Router는 클라이언측 라우팅을 가능하게 합니다. 이게 뭐냐면,  
 전통적인 방식은 브라우저가 웹서버로 문서를 요청하고 다운로드후 css, javascript등의 요소들을 평가한후에 랜더링하여 화면에 보여줍니다. 
 클라이언트측 라우팅은 앱이 문서의 다른 내용들을 뺀 사용자가 클릭한 그 url를 업데이트할 수 있습니다. 그래서 즉시로 요청한 url과 연관된 새로운 UI과 새로운 데이터를 fetch하여 정보를 갱신합니다.
+컴포넌트를 요청주소에 따라사 연결될 수 있도록 Route요소를 사용하는 것입니다. 
 
 
 먼저 rounter 기능을 사용하려면 해당 기능을 설치해야 합니다.   특정버전을 원한다면 dom글자위에  @특정버전를 추가합니다.   
@@ -92,5 +93,14 @@ url에 : ```  http://localhost:3000/create  ```  해주면 아까 작성한 내�
 <Route path="/create" exact={true}  element={<Create /> } ></Route> 
 ```
 
-
-
+## Routes 요약
+- 전에 사용하던 Switch 대신 Routes로 변경되었습니다.
+- path =":id"로 상대경로로 지정할 수 있으면 path="." , path=".." 등으로 상대경로를 지정할 수 있습니다.
+- 중첩 라우팅을 할 수 있습니다. 아래와 같이    
+``` javascript
+<Routes>
+        <Route path="web/*" element={<Web />}>
+             <Route path=":id" element={<WebPost />} />
+        </Route>
+</Routes>
+```   
