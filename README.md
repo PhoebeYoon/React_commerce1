@@ -35,8 +35,9 @@ useEffect(() => {
         }
     }, [input])
 ```
-우리의 예제에 적용해보면,  
-``` setTimeout(()=>{},1000); 
+우리의 예제에 적용해보면,  [ useFetch.js ]
+``` 
+setTimeout(()=>{ 생략 },1000); 
   return ()=>{ console.log('clean up');
    }
     },[]);
@@ -44,21 +45,35 @@ useEffect(() => {
  변경해 줍니다. 그리고 실행 후 콘솔창을 확인해 보면,   
  처음 페이지가 로드되었을때, clean up 이 한번만 출력됩니다. 
  
- 
- 
-Component의 unmount이전 / update직전에 어떠한 작업을 수행하고 싶다면 Clean-up함수를 반환해 주어야 한다.
+여기까지 잘 따라오셨나요?  이제 내용을 추가해 보도록 하겠습니다. 
+우선 fetch() 함수에 대해 좀 설명해 보겠습니다   
+``` 
+fetch('http://localhost:8080/요청지', { method : "GET" })   
 
-unmount 될 때
-useEffect(func, [])
+fetch("http://localhost:8080/요청지", {
+            method : "POST",          //메소드 지정
+            headers : {               //데이터 타입 지정
+                "Content-Type":"application/json; charset=utf-8"
+            },
+            body: JSON.stringify(data)   //실제 데이터 파싱하여 body에 저장
+        })
+```   
+아마도 눈에 익은 형태일것입니다. 
+fetch 객체는 promise 객체를 리턴하는 비동기함수입니다. promise객체에는 abort(중단) 기능이 없기 때문에 'AbortController '를 이용하여 비동기식 동작중단 기능을 만들어보겠습니다.  
+이걸 왜 하냐면, 우리의 예제에 에러가 발생할 경우를 대비해서 .catch()문을 적어놓았습니다.  이것을 좀더 효과적으로 바꿔보자는 것입니다.  
 
-특정값 update 직전
-useEffect(func, [특정값])
-
-clean-up함수를 사용하게되면, 작동 순서는 re-render -> 이전 effect clean-up -> effect
-
-useEffect 라는 Hook 을 사용하여 컴포넌트가 마운트 됐을 때 (처음 나타났을 때), 언마운트 됐을 때 (사라질 때), 그리고 업데이트 될 때 (특정 props가 바뀔 때) 특정 작업을 처리하는 방법에 대해서 알아보겠습니다.
-
-그리고, useEffect 에서는 함수를 반환 할 수 있는데 이를 cleanup 함수라고 부릅니다. cleanup 함수는 useEffect 에 대한 뒷정리를 해준다고 이해하시면 되는데요, deps 가 비어있는 경우에는 컴포넌트가 사라질 때 cleanup 함수가 호출됩니다.  
+사용자가 웹요청을 한뒤 이 요청이 필요없어졌다고 가정해 봅시다. 이제까지는 웹요청을 취소할 수 있는 기능이 없어서 일단 요청을 보내고 난뒤 이 요청이 필요없어져도 취소하지 못하고 요청은 그대로 두고 응답받는 내용을 사용하지 않는 식으로 구현이 되었던 것입니다. http 요청이 꽤 빠르기때문에 별 문제 없는것처럼 보이지만 불필요한 네트워크 트래픽이 생기기도 하고 자원을 차지하고 있으니 취소를 하자는 것입니다   
+그리고 이것을 'AbortController '를 통해서 구현할 수 있다는 거죠.
 
 
-There are different ways to cancel fetch request calls: either we use AbortController or we use Axios’ cancel token.
+## AbortController 
+- AbortController는 signal 이라는 속성(property)과 abort 라는 메소드(method)로 구성되어 있습니다. 
+
+1. 선언  
+  ``` let controller = new AbortController; ```   
+2. fetch 함수에 signal 파라미터 할당하기  
+    ``` fetch(url, { signal: controller.signal }); ```   
+3. abort 함수 호출   
+``` controller.abort(); ```   
+
+
