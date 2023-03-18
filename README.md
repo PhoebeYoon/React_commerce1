@@ -106,5 +106,5 @@ url에 : ```  http://localhost:3000/create  ```  해주면 아까 작성한 내�
 ```   
 - 그럼 이것을 해주기 위해 import 문장은 아래와 같이 해야 합니다 
 ```
-mport { Link, Routes, Route, Link, Outlet } from "react-router-dom";
+import { Link, Routes, Route, Link, Outlet } from "react-router-dom";
 ``` 
