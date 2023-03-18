@@ -82,4 +82,15 @@ url에 : ```  http://localhost:3000/create  ```  해주면 아까 작성한 내�
 ```
 여기에서 앵커의 url를 '/create' 로 이미 지정했기 때문에 메뉴를 클릭해서도 새로운 페이지로 이동할 수 있습니다.  
 
+## exact 옵션을 넣어봅시다
+예제에 있는 내용 중 Home으로 갈때의 링크는 '/' 이고, Create페이지로 갈때는 '/create' 입니다.  
+여기서 언급할 내용은 사용자가  '/create' 를 가려고 할때 키보드로 '/'을 입력하는 시점에서   
+리액트는 '/' 인지 '/create'의 맨앞의 '/' 인지 잘 모른다는 것입니다. 그래서 두개를 모두 랜더링 한다는 것입니다.   
+그래서 정확한 path에 정확하게 위치해야만 해당 컴포넌트를 렌더링하기 위해 ``` exact={treu} ```를 삽입해줍니다.    
+```javascript
+<Route path="/"  exact={true}  element={<Home /> } ></Route>
+<Route path="/create" exact={true}  element={<Create /> } ></Route> 
+```
+
+
 
