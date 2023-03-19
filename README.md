@@ -33,3 +33,5 @@ export default Navbar;
 
 <img width="338" alt="스크린샷 2023-03-18 오후 2 30 22" src="https://user-images.githubusercontent.com/48478079/226087216-8c3df23f-d887-4390-aee6-3cf99b530da6.png">
 
+마지막으로 웹페이지를 실행시킨 뒤, Link로 연결된 부분이 ```<a>```태그로 바꿔있는 것을 확인하세요. 
+
