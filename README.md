@@ -4,6 +4,8 @@
 ## Route 파라미터 -useParams 
 
 The useParams hook은 ``` <Route path>```에 매치되는 현재의 url로부터 다이나믹한 파라미터 오브젝트를 리턴하며 이 오브젝트는  key/value 쌍으로 되어 있습니다.   
+Route에서 Key를 지정해주고, 해당 Key에 Value를 넣어 url를 완성합니다. 그럼 useParams를 통해 key/value 객체형태로 반환됩니다.
+
 
 브라우저의 url에     
 'http://localhost:3000/'    
