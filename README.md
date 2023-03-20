@@ -24,12 +24,11 @@ export default NotFound;
 
 ```   
 
-
-
-
 [App.js] 아래내용을 추가해 주세요.   
 ```javascript 
 import NotFound from './NotFound';
 <Route path="*"  element={ <NotFound /> } ></Route>   
 
 ```   
+
+이것으로 React part1 수업을 마치겠습니다.  다음은 part2에서 뵙겠습니다. 
