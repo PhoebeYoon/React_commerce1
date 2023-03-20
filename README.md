@@ -76,6 +76,10 @@ export default Home;
 
 ## useFetch 
 
+fetch는 컴포넌트가 마운트되거나 url에 변화가 있으면 실행됩니다   
+만약 url이 undefined거나 또는 data가 온전히 불러와지기전 컴포넌트가 unmounted 될때에는 fetch는 호출되지 않습니다. 
+
+
 useFetch 가 호출되면 loading, data, error 세 가지 값을 반환합니다.   
 loading은 데이터를 요청 중일 때 true, 그 외 경우 false 를 반환하고,   
 data 는 요청해서 응답받은 데이터 값으로 초기 값은 undefined, 완료 후 해당 값을 반환합니다.   
