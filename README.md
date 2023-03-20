@@ -1,7 +1,7 @@
 ###### 🌵 React_Tutorial_Part1
 
 
-## 사용자 Hook 만들기  
+## useHook   
 
 두 개의 자바스크립트 함수에서 같은 로직을 공유하고자 할 때는 또 다른 함수로 분리하는 것이 좋습니다.   
 컴포넌트와 Hook 또한 함수이기 때문에 같은 방법을 사용할 수 있습니다. 
@@ -18,7 +18,7 @@ Home.js에서 useFectch() 부분을 따로 떼어 Hook으로 만들어 보겠습
 ```javascript
 import { useEffect, useState } from 'react';
 
-const useFectch = (url) => {
+const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [isPending , setPending] = useState(true);
   const [error, setError] =useState(null);
@@ -45,7 +45,7 @@ const useFectch = (url) => {
     return {data, isPending, error}
 }
  
-export default useFectch;
+export default useFetch;
 
 ```    
 이 코드에서는 마지막에 return 값을 주어야 합니다. 그래야 해당 Hook를 부른후에 그 결과값을 갖고 뭔가를 진행할 수 있으니까요. 우리가 리턴해야 할 것은 3가지 입니다. data, isPending,error 입니다.  
@@ -73,4 +73,13 @@ export default Home;
 
 수정이 잘 되었다면 이전 수업과 같은 결과화면이 나옵니다.  
 
+
+## useFetch 
+
+useFetch 가 호출되면 loading, data, error 세 가지 값을 반환합니다.   
+loading은 데이터를 요청 중일 때 true, 그 외 경우 false 를 반환하고,   
+data 는 요청해서 응답받은 데이터 값으로 초기 값은 undefined, 완료 후 해당 값을 반환합니다.   
+error 는 요청 도중 error 가 일어났을 때 에러 객체를 리턴하고 그 외 경우 false 를 반환합니다.
+ 
+ 
 
