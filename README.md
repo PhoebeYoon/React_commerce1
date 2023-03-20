@@ -71,3 +71,78 @@ const Create = () => {
 
 ``` 
 
+## useNavigate 사용하기 (useHistory 대신 )
+
+useNavigate는 리액트에서 url 주소를 변경할때 사용하는 hook 입니다. url이 변경되면 url주소와 일치하는 Route컴포넌트와 매치시켜 렌더링을 하지만 리액트에서는 url의 변경없이 내부 컴포넌트의 변경만으로도 화면을 바꿀 수 있습니다. 
+우리는 위의 실습내용에 추가하여 폼을 완성한 후 submit를 한뒤에 우리의 페이지는 Home으로 돌아가길 원합니다. 이때 useNavigate를 사용하면 되는데 버전이 업데이트되면서 useHistory대신 useNavigate를 사용합니다.   
+
+``` 
+import { useNavigate } from 'react-router-dom';
+const history = useNavigate();  
+fetch().then(()=>{  history('/create') })
+fetch().then(()=>{  history('/create') })
+``` 
+를 추가합니다. 여기서  history('/')로 바꿔주면 Home으로 나옵니다.
+완성된 코드는 다음과 같습니다.  
+
+
+``` javascript 
+import { useState } from "react";
+import { useNavigate } from 'react-router-dom';
+
+const Create = () => {
+  const [title, setTitle] = useState('');
+  const [body, setBody] = useState('');
+  const [author, setAuthor] = useState('');
+  const [isPending, setPending] = useState(false);
+  const history = useNavigate();
+
+  const handleSubmit= (e)=>{  
+    e.preventDefault();
+    const blog = { title, body, author};
+
+    fetch("http://localhost:8000/blogs",{ 
+      method:'POST',
+      headers : { 'Content-Type':"application/json"},
+      body : JSON.stringify(blog)
+    }).then( ()=>{
+      console.log("Added new blog")
+      setPending(false);
+      history('/create')
+    })
+  }
+
+  return (  
+    <div className="create">
+      <h2>Add a new Blog</h2>
+      <form action="" onSubmit={handleSubmit}>
+        <label>Blog Title</label>
+        <input type="text" 
+          required
+          value={title}
+          onChange={ (e)=>{ setTitle(e.target.value)} } />
+        <label> Blog body: </label>
+        <textarea  required 
+          value={body}
+          onChange={(e)=> { setBody(e.target.value)} } >
+        </textarea>
+        <label> Blog author :</label>
+        <select value={author} 
+          onChange={(e)=>{setAuthor(e.target.value)}}>
+          <option value="">선택하세요 </option>
+          <option value="Kim">Kim</option>
+          <option value="Park">Park</option>
+          <option value="Lee">Lee</option>
+        </select>
+       { !isPending &&  <button> Add Blog</button> }
+       { isPending &&  <button disabled> ... Add Blog ...</button>}
+      </form>
+    </div>
+  );
+}
+export default Create;
+
+```     
+
+
+
