@@ -92,7 +92,7 @@ function App() {
 export default App;
 ```    
 
-## 기본 폴더와 파일의 
+## 기본 폴더와 파일의 설명
 ```
 public: create-react-app으로 개발할 React 프로젝트의 Static 파일들(index.html 등)이 저장된 폴더입니다.
 public/index.html: 개발한 React 프로젝트가 표시될 파일
