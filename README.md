@@ -76,6 +76,7 @@ export default Home;
 
 > 컴포넌트의 동적인 값을 상태(state)라고 하는데 리액트가 갖고 있는 useState 함수를 이용해서 이 상태(state)를 관리할 수 있다. 
 
-  
+> 터미널에 error 메시지는 확인이 필요한데, WARNING 가 나올때 혹시 이것을 원치 않으시면 코드 맨위에  
+```  /* eslint-disable */ ``` 넣어주세요
 
 
