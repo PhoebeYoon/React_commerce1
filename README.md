@@ -16,7 +16,14 @@
 - 그럼 npm은 대체 무슨 역할을 할까요 
 npm은 node.js패키지 매니저 도구입니다. npm은 세계에서 가장 큰 소프트웨어 저장소입니다. 오픈소스 개발자들은 소프트웨어를 공유하기 위해 npm를 사용합니다. npm웹사이트 ( https://www.npmjs.com/)에 가시면 수많은 패키지들이 있습니다. 개발에 필요한 것을 찾아 설치하면 끝~ 입니다. 참고로, npm 은 따로 설치할 필요없이 node.js가 설치될때 함께 설치됩니다. 
 
---------------
+
+## Thinking in React
+
+React can change how you think about the designs you look at and the apps you build. When you build a user interface with React, you will first break it apart into pieces called components. Then, you will describe the different visual states for each of your components. Finally, you will connect your components together so that the data flows through them. In this tutorial, we’ll guide you through the thought process of building a searchable product data table with React.
+
+###### (발췌 : https://react.dev/learn/thinking-in-react )
+
+## 프레임워크
 
 자바스크립트기반 프레임워크들이 여러개 있지만 공통적으로 모델(Model)과 뷰(View)가 있습니다.
 모델은 어플리케이션에서 사용하는 데이터를 관리하는 영역이고
