@@ -61,8 +61,10 @@ a. 클릭할때마다 1씩 증가하기
 <img width="250" alt="스크린샷 2023-04-16 오후 3 27 42" src="https://user-images.githubusercontent.com/48478079/232276804-b0a695eb-9c72-4af8-9c7c-0cc2f07eb893.png">      
 b. input에 삽입한 내용을 화면에 출력하기  
 <img width="250" alt="스크린샷 2023-04-16 오후 3 26 42" src="https://user-images.githubusercontent.com/48478079/232276805-0f78a110-8283-4019-a272-4ca4cbaf84c8.png">    
-c. useState에 true 또는 false를 이용하여 글자가 보이게 또는 안보이게
+c. useState에 true 또는 false를 이용하여 글자가 보이게 또는 안보이게   
+<img width="250" alt="스크린샷 2023-04-16 오후 4 16 17" src="https://user-images.githubusercontent.com/48478079/232280035-c998f33d-138e-48b8-bbae-dae706ddd887.png">
 
+ 
 
 
 
