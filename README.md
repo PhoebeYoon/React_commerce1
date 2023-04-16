@@ -1,6 +1,6 @@
 ###### 🌵 React_Tutorial_Part1
 
-수업을 진행하기 전에 Hook(React 16.8.0 버전부터) 과 useEffect와 useState에 대해 간략히 살펴봅시다.
+수업을 진행하기 전에 Hook(React 16.8.0 버전부터) 과 useState 와 useEffect에 대해 간략히 살펴봅시다. (Hooks에는 여러가지가 있지만 우리는 useState와 useEffect에 대해서만 알아볼것입니다.)  
 우리는 이미 Hooks에 대한 체험이 있기때문에 그냥 문자로 읽었을때보다 좀더 이해할 수 있을 것입니다.   
 ## Hooks  
 우선 Hook은 Hooks이며 <b> 함수 </b> 입니다.    
@@ -18,6 +18,8 @@ Hook의 개념이 여전히 애매하다면 이렇게 생각해봅시다.  여�
 그리고 Hooks를 사용할때는 규칙이 있습니다.    
 - 최고 레벨의 Hooks만 호출할 수 있으며 루프, 조건 또는 중첩 함수 내부의 Hooks 를 호출하면 안됩니다. 
 - React 함수 컴포넌트 내에서만 Hooks만 호출할 수 있습니다. 
+- Hook를 만들때는 use를 앞에 붙여야 한다.
+
 
 
 ## 1. useState
