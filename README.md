@@ -7,17 +7,58 @@
 s가 붙여기 때문에 하나가 아니라 여러개라는 것을 짐작할 수 있습니다.  그리고 모든 함수에는 특정한 기능(코드)를 가지고 있듯이 이것도 그러합니다. 이 Hooks이라는 것이 뭐하냐면,   
 영어로는 'hook into '이고, 한글로 하면 '~에 연결하다'의 기능을 합니다.    
 즉 함수컴포넌트에서 리액트 state와 lifecycle에 관여하여 뭔가를 연결한다는 것이다.   
-리액트는 빌트인 Hooks 함수들을 제공하는데 대표적인 것이 우리가 이미 사용해봤던 useEffect함수 와 useState 등입니다. 그리고 사용자가 직접 만드는 Hook도 있습니다.  
- Hook의 개념이 여전히 애매하다면 이렇게 생각해봅시다.  여러분은 이미 Math.random(), Math.floor() 함수를 사용해봤을것이다. 
+리액트는 빌트인 Hooks 함수들을 제공하는데 대표적인 것이 우리가 이미 사용해봤던 useEffect함수 와 useState 등입니다. 그리고 사용자가 직접 만드는 Hook도 있습니다.  <br> 
+
+Hook의 개념이 여전히 애매하다면 이렇게 생각해봅시다.  여러분은 이미 Math.random(), Math.floor() 함수를 사용해봤을것이다. 
  random(), floor()는 모두 Math라는 함수에 속합니다.  
- 이와같은 방식으로 Hooks라는 함수가 있는데 그것의 서브(?)함수로 useState와 useEffect가 있다고 생각하면 어떨까 싶습니다. 그리고 이것들은 리액트의 state와 관련되고 리액트의 lifecycle에서 사용한다고 생각하십시요.  
+ 이와같은 방식으로 Hooks라는 함수가 있는데 그것의 서브(?)함수로 useState와 useEffect가 있다고 생각하면 어떨까 싶습니다. 그리고 이것들은 리액트의 state와 관련되고 리액트의 lifecycle에서 사용한다고 생각하십시요.  <br>
+ ( 그리고 자바스크립트의 배열구조분해(destructuring) 문법을 사용하니 혹시 이 구조에대해 익숙하지 않다면 먼저 학습이 필요합니다.)      
+ 
 
 그리고 Hooks를 사용할때는 규칙이 있습니다.    
-최고 레벨의 Hooks만 호출할 수 있으며 루프, 조건 또는 중첩 함수 내부의 Hooks 를 호출하면 안됩니다. 반응 함수 구성 요소에서 Hooks만 호출할 수 있습니다. 
+- 최고 레벨의 Hooks만 호출할 수 있으며 루프, 조건 또는 중첩 함수 내부의 Hooks 를 호출하면 안됩니다. 
+- React 함수 컴포넌트 내에서만 Hooks만 호출할 수 있습니다. 
+
+
+## 1. useState
+```js
+import React, { useState } from 'react';
+
+function Example() {
+  // "count"라는 새로운 상태 값을 정의합니다. 
+  const [count, setCount] = useState(0); // 1번
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}> // 2번
+        Click me
+      </button>
+    </div>
+  );
+}
+```    
+위의 내용는 useState의 예시코드입니다. 1번과 2번이 중요합니다.   
+React에서 함수 컴포넌트는 2가지 모양을 가집니다  
+```js
+const Example = (props) => {
+  // 여기서 Hook을 사용할 수 있습니다!
+  return <div />;
+}
+```  
+
+```js
+function Example(props) {
+  // 여기서 Hook을 사용할 수 있습니다!
+  return <div />;
+}
+```   
+그래서 useState는 state를 함수 컴포넌트 안에서 사용할 수 있게 해줍니다. 함수 컴포넌트는 this (자바스크립트에서 이미 학습하셨죠 )를 가질 수 없습니다. 그래서 useState Hook를 직접 컴포넌트에서 사용합니다. 위의 예제에서 useState() 호출되면 state의 초기값 여기서는 count의 초기값을 인자로 넘겨줍니다. 이 초기값은 객체일 필요는 없고 문자, 숫자타입을 가질 수 있습니다.   
+그리고 이 useState는 초기값을 넘겨줄 변수 여기서는 count와 해당 변수를 갱신할 수 있는 함수 이 2가지를 쌍으로 반환합니다. 여기서 해당변수를 갱신할 수 있는 함수는 setCount입니다.
 
 
 
-## 1. useEffect   
+## 2. useEffect   
 
 useEffect는 뭐하는 걸까?
 
