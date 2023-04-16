@@ -6,7 +6,7 @@ const StateTuts3= ()=>{
  
   return ( 
     <div>
-      <div>{count}</div>
+      <h1>{count}</h1>
       <button onClick={ ()=>{ 
         setCount(count-1); 
         setShowText( !showText );
