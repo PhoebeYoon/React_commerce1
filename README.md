@@ -71,7 +71,6 @@ arr.map(function(element, index, array){  }, this);
 [ App.js ]   
 ```javascript
 import React from "react";
-import "./styles.css";
 
 import arrayData from "./arrayData";
 import objectData from "./objectData";
