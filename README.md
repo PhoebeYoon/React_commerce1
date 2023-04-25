@@ -23,6 +23,12 @@ import를 하게 되면 자동으로 JSON.parse 함수가 적용된 것 처럼 �
 arr.map(function(element, index, array){  }, this);
 ```
 
+### 실습순서 :
+1. 터미널에서 npx create-react-app 프로젝트명
+2. code .
+3. 📁src 에 objectData.json  , arraryData.json 파일을 생성합니다.
+4. App.js 안에 아래의 내용을 삽입합니다.
+5. 브라우저의 개발자도구를 열어서 결과를 확인합니다 
 
 
 [ objectData.json ] 
@@ -88,10 +94,10 @@ export default function App() {
       </li>
     );
   });
-
+  // end of newArrayDat
   return (
     <div className="App">
-      <ul className="container">{newArrayData}</ul>
+      <ul>{newArrayData}</ul>
       <h1>{objectData.welcomeMessage}</h1>
       <h2>you connected to {objectData.localAddress}</h2>
       {objectData.isDevEnv ? (
