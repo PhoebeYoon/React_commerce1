@@ -109,15 +109,14 @@ export default function App() {
 
 ``` 
 
-객체를 담은 JSON 파일의 데이터에 접근할 때는 자바스크립트 객체와 똑같이 이용하면 됩니다.  
+<img width="650" alt="스크린샷 2023-04-25 오전 10 52 51" src="https://user-images.githubusercontent.com/48478079/234155126-6806e871-c4b9-42b4-8fcc-db39ff0a0ff2.png">
+
+
+
+
+
+- 객체를 담은 JSON 파일의 데이터에 접근할 때는 자바스크립트 객체와 똑같이 이용하면 됩니다.  
 ``` const {welcomeMessage, localAddress, isDevEnv} = objectData;     ```     
 
-Axios, Fetch, XMLHttpRequest는 서버로부터 데이터를 받기 위한 함수(라이브러리)입니다. 하지만 우리는 로컬에 있는 JSON 파일을 불러오고 싶은 것이기 때문에 위의 요소들은 요구사항과 맞지않습니다. 로컬이 아닌 서버로부터 JSON 파일을 받기 위해서는 Axios, Fetch, XMLHttpRequest를 이용해야 합니다.    
-
-
-
-
-
-
-
+> Axios, Fetch, XMLHttpRequest는 서버로부터 데이터를 받기 위한 함수(라이브러리)입니다. 하지만 우리는 로컬에 있는 JSON 파일을 불러오고 싶은 것이기 때문에 위의 요소들은 요구사항과 맞지않습니다. 로컬이 아닌 서버로부터 JSON 파일을 받기 위해서는 Axios, Fetch, XMLHttpRequest를 이용해야 합니다.    
 
