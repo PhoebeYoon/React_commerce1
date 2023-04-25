@@ -18,6 +18,13 @@ import를 하게 되면 자동으로 JSON.parse 함수가 적용된 것 처럼 �
 
 <img width="672" alt="스크린샷 2023-03-17 오후 1 52 20" src="https://user-images.githubusercontent.com/48478079/225815678-a3c9e5a7-8432-416d-8005-d6d4647ba9cb.png">
 
+### map() 형식 
+```js
+arr.map(function(element, index, array){  }, this);
+```
+
+
+
 [ objectData.json ] 
 ```
 {
