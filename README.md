@@ -1,6 +1,21 @@
 ###### 🌵 React_Tutorial_Part1
 
 
+## 용어정리하고 갑니다    
+npm은 package manager (패키지 관리자) 이며, 
+npx은 package Runner 입니다.    
+
+자바스크립트 패키지 관리 모듈인 npm(Node Package Module) 5.2.0버전부터 npx가 추가되었으며 npm에서 제공하는 일종의 도구입니다. 그 npx는 필요한 패키지를 임시로 설치해서 '실행' 하는 용도로 사용됩니다. 
+1. npm install 이라고 하면 :file_folder:node_module 가 생성되면서 패키지가 설치됩니다.  ``` npm i ``` 는 ```  npm install ``` 를 줄인것입니다 
+2. npm install 패키지 --save 를 붙이면 package.json 파일에 dependencies 라는 항목에 해당 패키지의 정보를 추가합니다.
+3. npm install 패키지 --save-dev 를 하면  dependencies에 추가되는 것이 아니라 devDepenencies 항목으로 추가되며 이는 빌드시에 차이가 있습니다.
+4. npm install 패키지 -g 에서 g는 global의 의미입니다. 전역적으로 설치하겠다는 의미입니다. 이 옵션을 빼고 설치하면 매 프로젝트마다 모듈을 설치하게 됩니다. -g 옵션이 좋을 수도 있지만 그렇지 않을 수도 있습니다. global로 설치하면 한번만 설치하니까 좋다고 생각할 수도 있지만 해당 모듈을 설치한 후에 업데이트되었는지 일일이 확인하고 다시 설치해줘야 하는 것도 문제가 되고  및 해당 모듈로 이미 만들어놓은 프로젝트가 업데이트된 모듈로 영향을 받을 수도 있습니다. 
+
+
+npm으로 뭔가를 설치할때 붙이는 -g는 global로 한곳에 모든 패키지를 모아서 설치하고 관리합니다.
+그러다 보니 
+
+
 React에서 배열을 담은 JSON 파일과 객체를 담은 JSON 파일을 불러오는 방법에 대해서 알아봅시다.
 
 
