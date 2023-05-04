@@ -6,3 +6,33 @@ React는 컴포넌트 기반입니다. 스스로 상태를 관리하는 캡슐�
 React는 Node서버에서 렌더링을 할 수도 있고 React native를 이용해서 모바일 앱도 만들 수 있습니다.   
 
 - React 컴포넌트는 render()라는 메서드를 구현하는데, 이것은 데이터를 입력받아 화면에 표시할 내용을 반환하는 역할을 합니다.
+
+
+##  자바스크립트의 함수 복습 
+node.js를 설치한 후에 터미널창에서 실행합니다.    
+ 
+#### map()함수
+[mapfunction.js]
+```
+map함수는 (불러온값, 인덱스, 배열자기자신)의 인수를 갖습니다. 
+
+let numbers=[1,2,3,4,5]
+numbers.map((item)=>{
+console.log(item*item
+})
+```   
+터미널에서 ```> node mapfunction.js  엔터 ``` 실행결과를 확인합니다. 
+
+
+#### forEach()
+```
+var arr = ['가','나','다','라'];
+arr.forEach(function(item,index,arr2){ 
+  console.log(item + index +arr2[index+1]); 
+})
+
+```  
+터미널에서 ```> node mapfunction.js  엔터 ``` 실행결과를 확인합니다. 
+
+
+
