@@ -13,7 +13,8 @@ node.js를 설치한 후에 터미널창에서 실행합니다.
  
 #### map()함수
 [mapfunction.js]
-```
+
+```js
 map함수는 (불러온값, 인덱스, 배열자기자신)의 인수를 갖습니다. 
 
 let numbers=[1,2,3,4,5]
@@ -25,7 +26,7 @@ console.log(item*item
 
 
 #### forEach()
-```
+``` js
 var arr = ['가','나','다','라'];
 arr.forEach(function(item,index,arr2){ 
   console.log(item + index +arr2[index+1]); 
@@ -34,5 +35,52 @@ arr.forEach(function(item,index,arr2){
 ```  
 터미널에서 ```> node mapfunction.js  엔터 ``` 실행결과를 확인합니다. 
 
+#### 배열의 여러형태 
+``` js
+// 1.
+let numbers=[1,2,3,4,5]
+numbers.map((num)=>{
+console.log(num * num)
+})
 
 
+// 2.
+var arr = ['가','나','다','라'];
+arr.forEach(function(item,index,arr2){ 
+  console.log(item + index +arr2[index+1]); 
+})
+
+//3.
+let data =['apple','kiwi', 'banana','orange'];
+let x = data[0];
+let z = data[2];
+console.log(x,z);
+
+let [a,b,c] = data;
+console.log(a,b,c);
+
+//4.
+
+let obj = {
+      name : 'apple',
+      address : 'Korea',
+      age : 500
+      
+    }
+
+// console.log(name, age) 이렇게하면 에러발생
+
+ let {name, age, address } = obj;
+ console.log(address, name,age)
+// let {urname, age, address } = obj; 변수명이 바뀌면 에러발생
+// console.log(address, urname,age)
+
+// 아래와 같이 사용할 수도 있다
+let { name: myName, age: myAge} = obj;
+console.log(myName, myAge);
+
+```
+
+위의 예제를 잘 보시면 우리가 이전에 배운 내용들에서 사용했던 표현들입니다. 자바스크립트의 표현식인것을 아시겠지요?
+
+ 
