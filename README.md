@@ -60,7 +60,6 @@ let [a,b,c] = data;
 console.log(a,b,c);
 
 //4.
-
 let obj = {
       name : 'apple',
       address : 'Korea',
