@@ -1,29 +1,8 @@
 ###### 🌵 React_Tutorial_Part1
 
-이번수업을 통해 여러분은,
- - React 설치및 실행
- - 컴포넌트
- - style추가하기
- - Click 이벤트 
- - state
- - props
- - Hook만들기
- - json파일 다루기
- - fetch
- - Router
- - Link
- 등의 내용을 이용하여 아래와 같은 출력을 만들어보겠습니다.   
- 
- 
- 
- 
- #### [ 결과화면1 ]    
- <img width="300" alt="스크린샷 2023-03-20 오후 4 25 10" src="https://user-images.githubusercontent.com/48478079/226273293-928f5d7e-be76-4571-a5d1-acb7968e7dba.png">
- 
-#### [ 결과화면2 ]
-<img width="300" alt="스크린샷 2023-03-20 오후 4 28 09" src="https://user-images.githubusercontent.com/48478079/226273705-08cf250d-7e7f-4656-8ea6-19d30f84e7aa.png">
+## React 란 
+사용자 인터페이스를 만들기 위한 자바스크립트 라이브러리 입니다.    
+React는 컴포넌트 기반입니다. 스스로 상태를 관리하는 캡슐화된 컴포넌트를 만듭니다. 그리고 이를 조합해서 복잡한 ui를 만들 수 있습니다. 컴포넌트 로직은 템플릿이 아닌 자바스크립트로 작성됩니다. 따라서 다양한 형식의 데이터를 앱안에서 손쉽게 전달할 수 있고, DOM과는 별개로 상태를 관리할 수 있습니다.  
+React는 Node서버에서 렌더링을 할 수도 있고 React native를 이용해서 모바일 앱도 만들 수 있습니다.   
 
-
-
-#### [ 결과화면3 ]    
-<img width="300" alt="스크린샷 2023-03-20 오후 4 25 19" src="https://user-images.githubusercontent.com/48478079/226273315-87070d4c-1cc8-4924-80e7-0938b0414a8d.png">
+- React 컴포넌트는 render()라는 메서드를 구현하는데, 이것은 데이터를 입력받아 화면에 표시할 내용을 반환하는 역할을 합니다.
