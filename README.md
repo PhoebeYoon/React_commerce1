@@ -1,6 +1,9 @@
 ###### 🌵 React_Tutorial_Part1
+## React - Wirte Less, Code More
+### (A javascript library for building User Interface) 
 
-이번수업을 통해 여러분은,
+
+### 이번수업을 통해 여러분은,
  - React 설치및 실행
  - 컴포넌트
  - style추가하기
