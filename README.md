@@ -58,3 +58,14 @@
 그리고 index.html 파일을 열어서  ``` <div id="root"></div> ``` 눈여겨 보시고요.
 index.js 파일을 열어서 내용을 눈여겨 보시면 됩니다.  
   
+  
+#### React로 앱생성 후 폴더구조 이해하기
+<img width="233" alt="스크린샷 2023-05-05 오후 2 38 22" src="https://user-images.githubusercontent.com/48478079/236384386-9276cce2-edbe-471a-8e6d-a0f983a09b16.png">
+
+- :file_folder: public  - 가상 DOM를 사용하는 리액트는 실제 DOM을 필요로 합니다. 즉 가상DOM이 들어갈 빈 껍데기 html이 필요한데 바로 이 빈껍데기 html이 존재하는 폴더가 public입니다.
+- :file_folder:src - 리액트를 이용한 개발이 실제적으로 이루어지는 폴더입니다. 우리가 만드는 대부분의 파일이 이곳에 저장됩니다.
+- manifest.json - 앱에 대한 정보를 담고 있는 Json파일입니다. 배경색은 어떤색인지, 앱의 이름은 무엇인지등등.
+
+src폴더에 있는 index.js와 App.js가 어떻게 동작하는지 아는 것이 중요한데, App.js에서 생성된 코드를 index.js에서 불러온 후 public 폴더에 있는 index.html의 ``` id='root' ```인 곳에 삽입합니다.
+
+
