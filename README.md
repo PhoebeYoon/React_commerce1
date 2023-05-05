@@ -16,18 +16,6 @@ render 함수는 화면에 보여주고자 하는 <b>내용</b>을 반환하는�
 React는 Node서버에서 렌더링을 할 수도 있고 React native를 이용해서 모바일 앱도 만들 수 있습니다.   
 
 
-📁public - index.html파일 있고, 가상 DOM을 위한 html파일입니다.   
-📁src - index.js, App.js, App.css파일이 들어가 있습니다.   
-  - [index.js]파일에는 'root' 엘리먼트를 읽어들이며 이것을 렌더링하는 과정이 들어가 있습니다.   
-      그리고 index.js파일에서는     App.js를 포함하고 있습니다.  
-  - [App.js] 에는 초기컴포넌트 내용이 들어가 있습니다. Router 설치하면 여기에 위치해야 합니다.    
-
-
-📁asset  
-📁components   
-📁pages   
-
-
 - React 컴포넌트는 render()라는 메서드를 구현하는데, 이것은 데이터를 입력받아 화면에 표시할 내용을 반환하는 역할을 합니다.
 
 
