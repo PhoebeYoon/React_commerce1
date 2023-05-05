@@ -48,9 +48,11 @@ React can change how you think about the designs you look at and the apps you bu
 DOM은 문서객체모델이라고 하는데  이것은 최종적으로 html문서를 파싱하여 '문서의 구성요소들을 객체로 구조화하여 나타낸것' 입니다. 
 DOM은 html엘리먼트,속성, css스타일, 이벤트, 메소드 등을 제어하게 되는데 이때 DOM을 반복적으로 직접 조작하게 되면 브라우저는 렌더링을 자주하게 되고 
 그 만큼 조작에 따른 렌더링의 비효율성과 복잡도가 증가하게 됩니다.
-그래서 virtual DOM은 조작에 대한 렝더링의 비효율성을 개선하고 SPA(Single Page Application)의 특징으로 DOM 복잡도 증가에 따른 최적화 및 
+그래서 virtual DOM은 조작에 대한 렌더링의 비효율성을 개선하고 SPA(Single Page Application)의 특징으로 DOM 복잡도 증가에 따른 최적화 및 
 유지보수를 더 쉽게 하기 위해 Virtual DOM이라는 DOM을 추상화한 가상의 객체를 사용하는 것입니다.  
 
+<img width="500" alt="스크린샷 2023-05-05 오후 1 57 44" src="https://user-images.githubusercontent.com/48478079/236380539-863821b0-36ff-49f5-9c63-524b1ed9152d.png">  
+변경내용을 DOM에 직접 수정하는게 아니라 중간단계로 Virtual DOM에 변경내역을 한번에 모으고 실제 DOM과 변경된 Virtual DOM의 차이를 판단한 후 구성요소의 변경된 부분만 찾아 변경한뒤 렌더링은 한번만 하는 것입니다. 
 
 
 
