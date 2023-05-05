@@ -28,7 +28,10 @@ React.createElement가 DOM 요소 자체가 아닌 개체를 반환하는 이유
 ##  자바스크립트의 함수 복습 
 node.js를 설치한 후에 터미널창에서 실행합니다.    
  
-#### map()함수
+### map() 형식 
+```js
+arr.map(function(element, index, array){  }, this);
+```
 [mapfunction.js]
 
 ```js
@@ -42,7 +45,7 @@ console.log(item*item
 터미널에서 ```> node mapfunction.js  엔터 ``` 실행결과를 확인합니다. 
 
 
-#### forEach()
+### forEach()
 ``` js
 var arr = ['가','나','다','라'];
 arr.forEach(function(item,index,arr2){ 
@@ -52,7 +55,7 @@ arr.forEach(function(item,index,arr2){
 ```  
 터미널에서 ```> node mapfunction.js  엔터 ``` 실행결과를 확인합니다. 
 
-#### 배열의 여러형태 
+### 배열의 여러형태 
 ``` js
 // 1.
 let numbers=[1,2,3,4,5]
