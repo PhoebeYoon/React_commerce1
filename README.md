@@ -92,13 +92,5 @@ function App() {
 export default App;
 ```    
 
-## 기본 폴더와 파일의 설명
-```
-public: create-react-app으로 개발할 React 프로젝트의 Static 파일들(index.html 등)이 저장된 폴더입니다.
-public/index.html: 개발한 React 프로젝트가 표시될 파일
-src: 실제 React를 사용하여 개발을 할 때 사용하는 폴더입니다.
-src/index.js: 우리가 개발한 React 프로젝트를 index.html 파일에 표시하기 위한 파일
-src/App.js: 기본적으로 제공되는 React 컴포넌트 예제
-src/App.css: App 컴포넌트에서 사용하는 CSS 파일
-package.json: 개발에 필요한 라이브러리를 관리하는 파일입니다.  
+  
 ```
