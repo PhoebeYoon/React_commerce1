@@ -17,11 +17,6 @@
 
 ## React에서 배열을 담은 JSON 파일과 객체를 담은 JSON 파일을 불러오는 방법에 대해서 알아봅시다.
 
-
-데이터를 불러올 로컬 JSON 파일 / JS ES6의 map() 함수
-
-
-
 ### 실습순서 :
 1. 터미널에서 npx create-react-app 프로젝트명
 2. code .
