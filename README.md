@@ -75,8 +75,11 @@ function App() {
       <div className="content">
         <h1> App 컴포넌트</h1>
         <p> {title } | Likes {likes}</p>
-        {/* <p>{ gender }</p>
+        
+        {/* <p>{ gender }</p> <-- Boolean 변수는 직접 화면에 출력되지 않습니다. 
+                          gender.toString()을 사용해서 문자열로 변환해야합니다.
         <p>{ person }</p>  이렇게는 출력이 제대로 되질 않습니다. 아래처럼 사용해야 합니다 */}
+        
         <p>{ person.name }</p>
         <p> { 10 }</p>
         <p> { "문자열도 허용됩니다 "}</p>
