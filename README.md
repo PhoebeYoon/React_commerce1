@@ -9,11 +9,17 @@
 render 함수는 화면에 보여주고자 하는 <b>내용</b>을 반환하는데 말하자면 <b>React 엘리먼트</b>를 반환합니다
 
 - ReactDom.render()함수는 html 코드와 html 엘리먼트의 두가지 인수를 받습니다. 이 함수의 목적은 지정된 html 엘리먼트안에 html 코드를 표시하는 것입니다.   
-- React.createElement(컴포넌트, props, ...) : 
+- React.createElement() - React에서는 document.createElement ( in javascript) 를 사용하지 않습니다. document.createElement는 DOM 요소(예: ```div``` 또는 ```h1```)를 반환합니다. 그러나 React.createElement는 DOM 요소를 나타내는 <b>개체</b>를 반환합니다.   
+```js
+const element = React.createElement("h1");
+//returns an object similar to this one:
+{
+  type: 'h1',
+  props: {}
+} 
+```
 
-
-따라서 다양한 형식의 데이터를 앱안에서 손쉽게 전달할 수 있고, DOM과는 별개로 상태를 관리할 수 있습니다.  
-React는 Node서버에서 렌더링을 할 수도 있고 React native를 이용해서 모바일 앱도 만들 수 있습니다.   
+React.createElement가 DOM 요소 자체가 아닌 개체를 반환하는 이유는 React가 가상 DOM을 작동하기 때문입니다. 
 
 
 - React 컴포넌트는 render()라는 메서드를 구현하는데, 이것은 데이터를 입력받아 화면에 표시할 내용을 반환하는 역할을 합니다.
