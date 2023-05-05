@@ -24,16 +24,20 @@ React can change how you think about the designs you look at and the apps you bu
 
 ###### (발췌 : https://react.dev/learn/thinking-in-react )
 
-## 프레임워크
+
+### DOM (Document Object Model)은 웹페이지를 이루는 태그들을 자바스크립트가 이용할 수 있게끔 트리구조로 만든 객체 
+Document of Object Model의 약자입니다.  웹 페이지는 일종의 문서(document)로 DOM은 문서의 구조화된 표현(structured representation)을 제공하여 자바스크립트가 DOM 구조에 접근하여 구조를 변경하고, 스타일을 입히고 내용을 변경할 수 있는 수단을 제공합니다. DOM 은 nodes와 objects로 문서를 표현한다  
+
+ <img width="300" alt="스크린샷 2023-05-05 오후 2 12 03" src="https://user-images.githubusercontent.com/48478079/236382415-1efac404-fb21-4be0-a623-01efb4ff1273.png">
+
+ 
+## 뷰(view)
 
 자바스크립트기반 프레임워크들이 여러개 있지만 공통적으로 모델(Model)과 뷰(View)가 있습니다.
 모델은 어플리케이션에서 사용하는 데이터를 관리하는 영역이고
 뷰는 사용자에게 보이는 부분입니다.
 
-
-
--컴포넌트는 사용자정의태그이다.  
--사용자화면에 뷰를 보여주는 것을 랜더링이라 하는데 리액트 라이브러리가 뷰를 랜더링하는 것을 이해하려면 초기 랜더링과 리렌더링의 개념을 알아야 한다. 어떤 것이든 맨처음 어떻게 보일지를 정하는 초기 렌더링이 필요합니다. 리액트에서는 이를 render함수가 합니다. 이 render함수는 뷰가 어떻게 생겼고 어떻게 작동하는지에 대한 정보를 지닌 객체입니다. 
+사용자화면에 뷰를 보여주는 것을 랜더링이라 하는데 리액트 라이브러리가 뷰를 랜더링하는 것을 이해하려면 초기 랜더링과 리렌더링의 개념을 알아야 합니다. 어떤 것이든 맨처음 어떻게 보일지를 정하는 초기 렌더링이 필요합니다. 리액트에서는 이를 render함수가 합니다. 이 render함수는 뷰가 어떻게 생겼고 어떻게 작동하는지에 대한 정보를 지닌 객체입니다. 
 렌더링작업이 끝나면 가지고 있는 정보를 이용하여 html마크업을 만들고 이를 우리가 보는 실제 페이지의 DOM요소안에 주입합니다.
 
 <img width="450" alt="스크린샷 2023-03-14 오후 7 38 51" src="https://user-images.githubusercontent.com/48478079/224975283-6f66ee13-7f5c-4665-bd49-52cc81051539.png">
@@ -43,7 +47,7 @@ React can change how you think about the designs you look at and the apps you bu
 (오른쪽 이미지의 '새로운 DOM 트리'는 virtual DOM입니다 )
 리액트와 Virtual DOM은 업데이트 처리 간결성을 제공합니다
 
-### DOM (Document Object Model)은 웹페이지를 이루는 태그들을 자바스크립트가 이용할 수 있게끔 트리구조로 만든 객체 
+
 ### 가상DOM (Virtual DOM)
 DOM은 문서객체모델이라고 하는데  이것은 최종적으로 html문서를 파싱하여 '문서의 구성요소들을 객체로 구조화하여 나타낸것' 입니다. 
 DOM은 html엘리먼트,속성, css스타일, 이벤트, 메소드 등을 제어하게 되는데 이때 DOM을 반복적으로 직접 조작하게 되면 브라우저는 렌더링을 자주하게 되고 
