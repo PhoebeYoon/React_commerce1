@@ -53,8 +53,7 @@
 5. 설치된 내용 살펴보기 ( 중요한 폴더만 잠시 보겠습니다)      
 📁node_modules   
 📁public 📁 index.html   
-📁src📁App.js. 
-      index.js   
+📁src📁App.js , index.js   
 어느 폴더에 무슨 파일이 있는지만 확인하세요  
 그리고 index.html 파일을 열어서  ``` <div id="root"></div> ``` 눈여겨 보시고요.
 
