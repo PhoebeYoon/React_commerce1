@@ -71,4 +71,7 @@ src폴더에 있는 index.js와 App.js가 어떻게 동작하는지 아는 것�
 <img width="580" alt="스크린샷 2023-05-05 오후 3 00 37" src="https://user-images.githubusercontent.com/48478079/236386817-7b826e64-0ecc-43ae-a801-f1cef102da71.png">
 
 
-<img width="400" alt="스크린샷 2023-05-05 오후 3 00 46" src="https://user-images.githubusercontent.com/48478079/236386825-abda3f1f-1a2d-45ef-95c4-4f7ebd9508b3.png">
+<img width="430" alt="스크린샷 2023-05-05 오후 3 00 46" src="https://user-images.githubusercontent.com/48478079/236386825-abda3f1f-1a2d-45ef-95c4-4f7ebd9508b3.png">
+
+
+
