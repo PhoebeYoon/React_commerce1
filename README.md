@@ -20,10 +20,7 @@
 
 데이터를 불러올 로컬 JSON 파일 / JS ES6의 map() 함수
 
-### map() 형식 
-```js
-arr.map(function(element, index, array){  }, this);
-```
+
 
 ### 실습순서 :
 1. 터미널에서 npx create-react-app 프로젝트명
