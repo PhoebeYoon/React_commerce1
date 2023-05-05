@@ -46,6 +46,10 @@ function App() {
 export default App;
 ```
 변경한 후 브라우저로 결과를 확인하세요.   
+
+이제 이전 수업에서 
+
+
 이제 한가지만 더 실습하고 이번 수업은 여기서 '끝' 하겠습니다.   
 
 해당 프로젝트폴더에서 :file_folder:node_modules 를 삭제해 봅니다.
