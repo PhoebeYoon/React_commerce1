@@ -76,4 +76,17 @@ manifest.json - 앱에 대한 정보를 담고 있는 Json파일입니다. 배�
 
 <img width="650" alt="스크린샷 2023-05-05 오후 3 05 02" src="https://user-images.githubusercontent.com/48478079/236387388-d2d50ca4-9f42-4727-a25e-38e390e366cb.png">
 
+## 컴포넌트 형식   
+function 뒤에 컴포넌트 이름은 대문자로 시작  
+export default 다음에 function 뒤에 온 똑같은 이름  
+이 파일을 불러올때는 같은 이름으로 불러온다  
 
+
+```
+function Car() {
+  return <h2>Hi, I am a Car!</h2>;
+}
+
+export default Car;
+
+```
