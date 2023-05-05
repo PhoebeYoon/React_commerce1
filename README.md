@@ -53,13 +53,13 @@
 5. 설치된 내용 살펴보기 ( 중요한 폴더만 잠시 보겠습니다)      
 📁node_modules   
 📁public 📁 index.html   
-📁src📁App.js , index.js   
+📁src📁App.js. 
+      index.js   
 어느 폴더에 무슨 파일이 있는지만 확인하세요  
 그리고 index.html 파일을 열어서  ``` <div id="root"></div> ``` 눈여겨 보시고요.
-index.js 파일을 열어서 내용을 눈여겨 보시면 됩니다.  
+
   
-  
-#### React로 앱생성 후 폴더구조 이해하기
+## React로 앱생성 후 폴더구조 이해하기
 <img width="233" alt="스크린샷 2023-05-05 오후 2 38 22" src="https://user-images.githubusercontent.com/48478079/236384386-9276cce2-edbe-471a-8e6d-a0f983a09b16.png">
 
 - :file_folder: public  - 가상 DOM를 사용하는 리액트는 실제 DOM을 필요로 합니다. 즉 가상DOM이 들어갈 빈 껍데기 html이 필요한데 바로 이 빈껍데기 html이 존재하는 폴더가 public입니다.
@@ -68,4 +68,7 @@ index.js 파일을 열어서 내용을 눈여겨 보시면 됩니다.
 
 src폴더에 있는 index.js와 App.js가 어떻게 동작하는지 아는 것이 중요한데, App.js에서 생성된 코드를 index.js에서 불러온 후 public 폴더에 있는 index.html의 ``` id='root' ```인 곳에 삽입합니다.
 
+<img width="580" alt="스크린샷 2023-05-05 오후 3 00 37" src="https://user-images.githubusercontent.com/48478079/236386817-7b826e64-0ecc-43ae-a801-f1cef102da71.png">
 
+
+<img width="400" alt="스크린샷 2023-05-05 오후 3 00 46" src="https://user-images.githubusercontent.com/48478079/236386825-abda3f1f-1a2d-45ef-95c4-4f7ebd9508b3.png">
