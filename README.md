@@ -11,14 +11,14 @@ const { error,isPendind,data:blog} = useFectch("http://localhost:8000/blogs/"+id
 그리고 이 내용을 콘솔창에 출력해보면 해당 내용들이 나옵니다. 그런데 실습할때 내용이 보여야 하는 페이지는 BlogsDetails 파일이니 Home에서 출력된 리스트중에 하나를 선택해야만 하겠지요? 
 그리고 아래와 같이 변경해 주면 됩니다.   
 
-
+[BlogsDetails.js]   
 ``` javascript
 import { useParams } from "react-router-dom";
-import useFectch from "./useFetch";
+import useFetch from "./useFetch";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const { error,isPendind,data:blog} = useFectch("http://localhost:8000/blogs/"+id);
+  const { error,isPendind,data:blog} = useFetch("http://localhost:8000/blogs/"+id);
   return ( 
     <div className="blog-details">
       <h2>Blog-Details -{id} </h2>
