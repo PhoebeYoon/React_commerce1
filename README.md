@@ -60,8 +60,6 @@ export default BlogDetails;
 ```     
 
 
-
-
 [BlosList.js]
 ```javascript
 
@@ -84,4 +82,4 @@ const BlogList = ({blogs, title}) => {
 export default BlogList;
 
 ```  
-
+다은 레슨에서 계속 이어갑니다.
