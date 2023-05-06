@@ -105,9 +105,3 @@ url에 : ```  http://localhost:3000/create  ```  해주면 아까 작성한 내�
         </Route>
 </Routes>
 ```   
-- 그럼 이것을 해주기 위해 import 문장은 아래와 같이 해야 합니다 
-```
-import { Link, Routes, Route, Outlet } from "react-router-dom";
-``` 
-이 정도는 기억하실 수 있을 것입니다.  
-많은 내용을 읽고도 기억 못하는 것보다 적정한 내용을 기억했다가 연관된 것들을 조금씩 추가하면 모두 기억할뿐 아니라 사용하는데 휠씬 수월합니다. 
