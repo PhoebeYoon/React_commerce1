@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 const StateTuts1= ()=>{
 
-  const [count, setCount ] = useState(10);
+  const [count, setCount ] = useState(0);
   const IncrementNumber= ()=>{
     setCount(count+1)
   }
