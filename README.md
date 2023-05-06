@@ -48,6 +48,15 @@ export default Navbar;
 
 ```    
 결과는 아래와 같다.   
-<img width="500" alt="스크린샷 2023-03-15 오후 5 48 58" src="https://user-images.githubusercontent.com/48478079/225255977-cc3b3324-bf04-4e4d-85b0-c91c24d8aa7f.png">
+<img width="500" alt="스크린샷 2023-03-15 오후 5 48 58" src="https://user-images.githubusercontent.com/48478079/225255977-cc3b3324-bf04-4e4d-85b0-c91c24d8aa7f.png">  
+
+스타일을 사용하는 다른 방법 ,   
+```js
+<div style="font-size:24px"> 개발 블로그 </div> <-- 이렇게는 작동하지 않습니다.
+아래처럼 
+let posts ={ color:'hotpink', fontSize='30px}
+<div style={posts}> 개발 블로그</div>
+
+```
 
 여기까지 잘 따라오셨다면 이제 여러분은 기초는 익힌것이다. 
