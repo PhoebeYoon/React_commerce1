@@ -122,19 +122,17 @@ export default BlogList;
 [ Home.js ]
 ```  <BlogList blogs={blogs} title="All Blogs"/>  ``` 를 추가합니다. BlogList 컴포넌트에 <b>blogs</b> 라는 이름으로 보내는 것입니다. 위에서 사용했던 pros가 아닙니다. 이 이름으로 유지하면 에러가 납니다.  그리고   
 [ BlogList.js ]  
-console.log(props.title)를 추가합니다.    
-콘솔창에 'All Blogs' 가 출력됩니다. 확인이 되었다면 아래처럼 변경한 후에 결과를 확인해주세요    
-``` 
-    <div className="blog-list">
-      <h2>{props.title}</h2>
-```
+console.log(props.title)    //에러발생    
+console.log(blogs.title)   
+console.log(title)  
+console.log(blogs) 를 추가한 후 결과를 확인해 봅니다.    
 
-실습했던 내용 중에서 BlogList.js에서 전달받는 인자를 이렇게 변경해 보겠습니다.  
-여기서 ({blogs,title})에서 <b>중괄호</b>가 들어간 것을 주의하세요(이미 자바스크립트에서 사용했던 문법입니다)     
+
+실습했던 내용 중에서 BlogList.js에서 전달받는 인자를 주의해서 보면   
+({blogs,title})에서 <b>중괄호</b>가 들어간 것을 주의하세요(이미 자바스크립트에서 사용했던 문법입니다)     
 ``` javascript
 const BlogList = ({blogs, title}) => {
-  // const blogs = props.blogs;
-  // console.log(props.title)
+  
   return ( 
     <div className="blog-list">
       <h2>{title}</h2>
