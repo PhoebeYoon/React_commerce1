@@ -3,7 +3,7 @@
 
 ## 완성되기 전 이런것들을 시도해보면 완성된 코드가 이해됩니다. 
 
-이번 수업은 함수를 매개변수로 전달하는 것을 다룰 예정입니다. 이전 수업인 'lesson06-click'를 한번 보시고 오시면 좋을듯합니다.   
+이번 수업은 함수를 매개변수로 전달하는 것을 다룰 예정입니다.  
 [ BlogList.js ] 에 
 ``` javascript 
 // return문 위에 삽입하세요 
@@ -11,11 +11,17 @@ const handleDelete=()=>{
   alert('okay')
  } 
  ...
+ 
 <button onClick={handleDelete()}>Delete</button> 
 ```  
 이렇게하면 웹페이지를 로드하자마자 alert문이 실행됩니다. 클릭이벤트에 의해 alert문을 실행하려면   
-``` <button onClick={()=>{ handleDelete()}}>Delete</button>  ```   
-이와 같이 해야합니다 ( lesson06의 내용입니다 )  이 내용에서 클릭이벤트가 일어난 개별 blog( blogs 안에 개별 blog)를 삭제하려면 각 blog의 유일한 key값을 넘겨서 해당하는 것을 blogs에서 찾아서 삭제해야 합니다. 그래서  
+
+``` 
+<button onClick={()=>{ handleDelete()}}>Delete</button>  
+<button onClick={ handleDelete }}>Delete</button>  
+```   
+
+이와 같이 해야합니다. 이 내용에서 클릭이벤트가 일어난 개별 blog( blogs 안에 개별 blog)를 삭제하려면 각 blog의 유일한 key값을 넘겨서 해당하는 것을 blogs에서 찾아서 삭제해야 합니다. 그래서  
 ``` javascript
 <button onClick={ ()=>{ handleDelete(blog.id, blog)}}>Delete</button> 
 ```    
