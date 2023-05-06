@@ -31,8 +31,11 @@ const BlogDetails = () => {
     </div>
    );
 }
-export default BlogDetails;
-```     
+export default BlogDetails;  
+```      
+확인을 위해 주소창에 ```localhost:3000/blogs/1 ``` 이런식으로 줍니다. 그러면 blogs 내용 중 해당 id에 해당하는 것만 화면에 출력됩니다. 아무 경로나 주는 것이 아니라 아까 BlogList에서 경로 지정을 /blogs/id 로 했기 때문입니다.  
+
+
 출력이 제대로 되었다면 css를 조금 추가해 보도록 하겠습니다. 
 
 [index.css] 에 추가하기  
