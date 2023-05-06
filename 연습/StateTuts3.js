@@ -1,4 +1,6 @@
+
 import { useState } from 'react'
+// 1씩 감소와 && 연산자로 내용을 보이게도 안 보이게도 하는 것을 알아봅시다
 
 const StateTuts3= ()=>{
   const [count, setCount ] = useState(100);
