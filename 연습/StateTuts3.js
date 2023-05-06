@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const StateTuts3= ()=>{
   const [count, setCount ] = useState(100);
-  const [showText, setShowText] = useState(false);
+  const [showText, setShowText] = useState(false); // useState(true)로 하면 p태그의 내용이 보입니다
  
   return ( 
     <div>
