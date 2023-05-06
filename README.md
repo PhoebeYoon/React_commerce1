@@ -186,13 +186,7 @@ const BlogList = ( { myContent, subtitle }) => {
     export default BlogList;
 ```  
 
-실행결과를 확인하시면 같은 화면이 출력됩니다.   
-
-
-
-
-
-
+실행결과를 확인하시면 같은 화면이 출력됩니다.  
 
 ## BlogList태그를 여러개 사용해보기
 [ Home.js ]   
@@ -200,8 +194,11 @@ const BlogList = ( { myContent, subtitle }) => {
 이번에는 ```<BlogList>``` 태그를 여러개 사용해보면서 조건을 준다면 어떻게 할까요?   
 blog의 author가 'Kim' 인것만 출력하고자 한다면,   
 ``` javascript 
-  //  <BlogList blogs={blogs} title="All Blogs!"/>
+ <div className="home">
+    <BlogList blogs={blogs} title="All Blogs!"/>
    <BlogList blogs={blogs.filter((blog)=> blog.author ==='Kim')} title="Kim's Blogs"/>
+  </div>
+  
  ```   
  filter()함수를 사용해서 해결하면 된다. 혹시 이렇게  사용하면 작동하지 않습니다   
 ``` <BlogList blogs={blogs.blog.author =='Kim'} title="Nobody's blogs"/> ``` 
