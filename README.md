@@ -146,8 +146,5 @@ useEffect(()=>{
 },[]);
 ```
 
-
-
-
- 
+:pencil: 완성된 Home.js 파일은 :file_folder:after 안에 있는 Home.js 입니다 
 
