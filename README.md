@@ -19,7 +19,7 @@ const Navbar = () => {
       <h1>The Nobody's Blog</h1>
       <div className="links">
         <Link to="/">Home</Link>
-        <Link to="/create">Create</Link>
+        <Link to="/create">Create</Link> <-- 기존 스타일을 넣어줍니다
       </div>
     </nav>
    );
