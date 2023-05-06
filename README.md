@@ -16,7 +16,7 @@
 
 ###### 이미지발췌 : https://www.snugarchive.com/blog/react-jsx-and-elements/
 
-3. jsx의 문법
+### 3. jsx의 문법
   - 속성명은 카멜케이스로 작성 예) onClick, onMouseDown
   - 자바스크립트 예약어와 같은 이름은 속성명으로 사용할 수 없습니다.
   - 자바스크립트 표현식을 사용할때는 {  } 사용
