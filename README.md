@@ -56,7 +56,8 @@ export default Navbar;
 아래처럼 
 let posts ={ color:'hotpink', fontSize='30px}
 <div style={posts}> 개발 블로그</div>
-
+또는
+<div style={{ color:'blue', fontSize:'30px' }}> 개발 블로그</div>
 ```
 
 여기까지 잘 따라오셨다면 이제 여러분은 기초는 익힌것이다. 
