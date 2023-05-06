@@ -85,8 +85,12 @@ deps : 배열 형태이며 function을 실행시킬 조건
 
 실습내용에 useEffect함수를 사용해봅시다.  
 [ Home.js ]
-``` javascript
-useEffect(()=>{
+``` javascript   
+import {useEffect, useState} from 'react'
+
+// return 문 위에 작성합니다
+
+useEffect(()=>{ 
   console.log('useEffect')
   console.log(blogs)
 });
