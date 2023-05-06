@@ -34,7 +34,10 @@ useEffect(() => {
             cleanup
         }
     }, [input])
-```
+```   
+( _위의 실습을 위해 입력했던 something에 관련된 내용은 삭제합니다_ )    
+
+
 우리의 예제에 적용해보면,  [ useFetch.js ]
 ``` 
 setTimeout(()=>{ 생략 },1000); 
