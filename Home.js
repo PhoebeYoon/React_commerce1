@@ -7,7 +7,7 @@ const Home = () => {
   const handleClick =()=>{
     console.log(a)
      setName('Kim Gil Dong')
-     setAge(25)
+     setAge(27)
   }
 
   return ( 
