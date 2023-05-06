@@ -21,7 +21,15 @@
   - 자바스크립트 예약어와 같은 이름은 속성명으로 사용할 수 없습니다.
   - 자바스크립트 표현식을 사용할때는 {  } 사용
   - html에서 닫는 태그가 없는 태그일지라고 닫는태그를 작성해야 합니다. 예) ``` <input /> ```   
-  - return ()  으로 사용합니다
+  - return ()  으로 사용하고 이안에서 최상의 태그는 하나만 적어줍니다  
+  - {boolean}, {null}, {undefined }는 무시됩니다. 유효하지만 랜더링을 하지 않습니다  
+  - {showHeader && <Header />} 와 같은 표현에서 showHeader의 값이 true 이면 옆에 있는  ```<Header />```를 랜더링합니다  
+  - false, true, null 또는 undefined와 같은 값들을 출력하고 싶다면 먼저 문자열로 전환 해야합니다.  
+  ``` 
+  <div>
+  My JavaScript variable is {String(myVariable)}.
+</div>
+```  
 
 이전 수업에서 웹브라우저의 개발자도구와 vscode로 App.js 내용을 비교한 그림, 기억나시나요?   
 #### 거기에 보면 App.js에는 ``` <div className="App"> ~ ``` 로 되어 있는데 개발자도구에는 ``` <div class="App"> ~ ``` 로 되어 있었습니다. jsx 문법에 따라 className이라고 했는데 실제 브라우저의 DOM으로 랜더링해서 보니 class로 변경되어 html 문법에 맞춰서 들어가 있었습니다.  
