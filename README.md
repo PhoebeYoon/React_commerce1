@@ -197,7 +197,7 @@ const BlogList = ( { myContent, subtitle }) => {
 ## BlogList태그를 여러개 사용해보기
 [ Home.js ]   
 
-이번에는 '<BlogList>' 태그를 여러개 사용해보면서 조건을 주다면 어떻게 할까?   
+이번에는 ```<BlogList>``` 태그를 여러개 사용해보면서 조건을 주다면 어떻게 할까?   
 blog의 author가 'Kim' 인것만 출력하고자 한다면,   
 ``` javascript 
   //  <BlogList blogs={blogs} title="All Blogs!"/>
