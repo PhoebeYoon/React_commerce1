@@ -56,10 +56,8 @@ useState를 사용하려면 먼저 import 해야합니다.
 
 [ name, setName  ] = useState('Hong Gil Dong')   
 새로운 state 변수 name을 선언하고 내용으로 'Hong Gil Dong'줍니다.   
-그리고 
-
-
-위의 코드를 이렇게 바꾸면 됩니다. 위에 설명한 a,b 대신 name, setName을 사용했습니다.  
+그리고 현재 state를 바꿀 함수로 setName를 지정합니다.  
+위의 코드를 이렇게 바꾸면 됩니다. 
 ``` javascript
 import {useState} from 'react'
 const Home = () => {
