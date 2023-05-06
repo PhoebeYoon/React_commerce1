@@ -62,7 +62,7 @@ export default BlogDetails;
 
 
 
-
+[BlosList.js]
 ```javascript
 
 import { Link } from 'react-router-dom';
