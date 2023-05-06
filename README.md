@@ -120,7 +120,7 @@ export default BlogList;
 ```
 ## porps 더 알아보기
 [ Home.js ]
-```  <BlogList blogs={blogs} title="All Blogs"/>  ``` 를 추가합니다. 그리고   
+```  <BlogList blogs={blogs} title="All Blogs"/>  ``` 를 추가합니다. BlogList 컴포넌트에 <b>blogs</b> 라는 이름으로 보내는 것입니다. 위에서 사용했던 pros가 아닙니다. 이 이름으로 유지하면 에러가 납니다.  그리고   
 [ BlogList.js ]  
 console.log(props.title)를 추가합니다. 이때 ``` const BlogList = (props) => { ``` 에 내용을 추가할 필요는 없습니다.  
 콘솔창에 'All Blogs' 가 출력됩니다. 확인이 되었다면 아래처럼 변경한 후에 결과를 확인해주세요    
@@ -149,7 +149,51 @@ const BlogList = ({blogs, title}) => {
 export default BlogList;
 ```   
 화면이 제대로 나오는지 확인합니다.   
-<img width="280" alt="스크린샷 2023-03-16 오후 2 20 11" src="https://user-images.githubusercontent.com/48478079/225522103-42cbbd97-cfc1-418d-a6d1-2f542b83b678.png">
+<img width="280" alt="스크린샷 2023-03-16 오후 2 20 11" src="https://user-images.githubusercontent.com/48478079/225522103-42cbbd97-cfc1-418d-a6d1-2f542b83b678.png"> 
+
+
+#### 컴포넌트로 props 전달시 변수명을 바꿔봅시다 
+
+[Home.js] 아래와 같이 바꿔봅니다 
+``` js
+ return ( 
+        <div className="home">
+          {
+            <BlogList myContent={blogs} subtitle="All blogs"/>
+          }
+        </div>
+       );
+       
+```
+
+[BlogList.js]
+```js
+const BlogList = ( { myContent, subtitle }) => {
+
+      console.log(' myContent ', myContent)
+      console.log(' subtitle ', subtitle)
+      return ( 
+        <div className="blog-list">
+          { myContent.map((blog)=>(
+              <div className="blog-preview" key={blog.id}> 
+              <h2>{blog.title}</h2>
+              <p>{blog.body}</p>
+              <p>{blog.author}</p>
+              </div>
+            ))}
+
+        </div>
+       ); }
+    export default BlogList;
+```  
+
+실행결과를 확인하시면 같은 화면이 출력됩니다.   
+
+
+
+
+
+
 
 ## BlogList태그를 여러개 사용해보기
 [ Home.js ]   
