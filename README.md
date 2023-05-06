@@ -78,7 +78,7 @@ function App() {
   const likes =50;
   // const gender =false;
   const person = {name:'Kim', age:30};
-
+  const myVariable =true;
   return (
     <div className="App">
       <div className="content">
@@ -95,6 +95,7 @@ function App() {
         <p>[1,2,3,4,5]</p>
         <p>{ <span> span 태그입니다 </span>} </p>
         <p> { Math.floor(Math.random()*10)}</p>
+        <div> My JavaScript variable is {String(myVariable)} </div>
       </div>
     </div>
   );
