@@ -142,6 +142,4 @@ const Create = () => {
 export default Create;
 
 ```     
-
-
-
+입력한 내용이 추가되는지 확인하시고, history(/create)를 history('/')로 바꿔서도 작동되는지 확인하세요  
