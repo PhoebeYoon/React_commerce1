@@ -1,7 +1,8 @@
 ###### 🌵 React_Tutorial_Part1
 
 
-[Create.js] 파일안의 return문안에 다음의 내용을 삽입하세요   
+[Create.js] 파일안의 return문안에 다음의 내용을 삽입하세요 (부분적인 내용입니다. 삽입시 주의하시고  
+ jsx 문법에 따르면 닫는태그가 없는 태그에도 태그를 닫아야 한다는것 잊지마세요)
 
 ``` javascript
 import { useState } from "react";
@@ -11,9 +12,9 @@ return (
       <h2>Add a new Blog</h2>
       <form>
        <label>Blog Title</label>
-       <input type="text"  required >
+       <input type="text"  required />
        <label>Blog body:</label>
-       <textarea  required >
+       <textarea  required > </textarea>
        <label>Blog author :</label>
        <select>
        <option value="">선택하세요 </option>
