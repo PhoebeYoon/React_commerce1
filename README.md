@@ -19,7 +19,9 @@ const Home = () => {
   return ( 
     <div className="home">
       <h2>Home </h2>
-      <button onClick={handleClick}>Click here</button>
+      {/* <button onClick={handleClick()}>Click here</button> */}
+      이렇게하면 로드되자마다 콘솔창에 내용이 출력됩니다. 그래서 아래처럼 해줍니다 
+       <button onClick={handleClick}>Click here</button>
     </div>
    );
 }
