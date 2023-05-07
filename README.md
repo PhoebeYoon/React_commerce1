@@ -48,13 +48,7 @@ const Example = (props) => {
   return <div />;
 }
 ```  
-
-```js
-function Example(props) {
-  // 여기서 Hook을 사용할 수 있습니다!
-  return <div />;
-}
-```   
+ 
 그래서 useState는 state를 함수 컴포넌트 안에서 사용할 수 있게 해줍니다. 함수 컴포넌트는 this (자바스크립트에서 이미 학습하셨죠 )를 가질 수 없습니다. 그래서 useState Hook를 직접 컴포넌트에서 사용합니다. 위의 예제에서 useState() 호출되면 state의 초기값 여기서는 count의 초기값을 인자로 넘겨줍니다. 이 초기값은 객체일 필요는 없고 문자, 숫자타입을 가질 수 있습니다.   
 그리고 이 useState는 초기값을 넘겨줄 변수 여기서는 count와 해당 변수를 갱신할 수 있는 함수 이 2가지를 쌍으로 반환합니다. 여기서 해당변수를 갱신할 수 있는 함수는 setCount입니다.
  
