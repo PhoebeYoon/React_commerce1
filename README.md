@@ -2,7 +2,7 @@
 
 ## 폼을 완성해보자   
 
-내용을 입력한 후에 submit를 하기 전에 아래 내용을 실습해봅시다. 
+내용을 입력한 후에 submit를 하기 전에 아래 내용을 먼저 보겠습니다  
 ``` 
  const handleSubmit= (e)=>{  
     e.preventDefault();
