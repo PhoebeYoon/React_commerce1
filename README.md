@@ -80,7 +80,6 @@ useNavigate는 리액트에서 url 주소를 변경할때 사용하는 hook 입�
 import { useNavigate } from 'react-router-dom';
 const history = useNavigate();  
 fetch().then(()=>{  history('/create') })
-fetch().then(()=>{  history('/create') })
 ``` 
 를 추가합니다. 여기서  history('/')로 바꿔주면 Home으로 나옵니다.
 완성된 코드는 다음과 같습니다.  
