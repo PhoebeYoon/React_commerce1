@@ -34,6 +34,9 @@ export default BlogDetails;
 
 [ App.js ]  
 ```javascript 
+import BlogsDetails from './BlogsDetails';
+
+
 <Routes>
    <Route path="/"  exact={true}  element={<Home /> } ></Route>
    <Route path="/create" exact={true}  element={<Create /> } ></Route>  
