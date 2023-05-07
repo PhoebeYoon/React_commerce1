@@ -30,5 +30,6 @@ import NotFound from './NotFound';
 <Route path="*"  element={ <NotFound /> } ></Route>   
 
 ```   
+브라우저의 주소창에 http://localhost:3000/아무거나  입력해서 NotFound 페이지가 나오는지 확인합니다.
 
-이것으로 React part1 수업을 마치겠습니다.  다음은 part2에서 뵙겠습니다. 
+이것으로 React part1 수업을 마치겠습니다.  
