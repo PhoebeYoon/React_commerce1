@@ -62,6 +62,8 @@ fetch("http://localhost:8080/요청지", {
         })
 ```   
 아마도 눈에 익은 형태일것입니다. 
+>JSON.stringify() 메서드는 JavaScript 값이나 객체를 JSON 문자열로 변환합니다.
+
 fetch 객체는 promise 객체를 리턴하는 비동기함수입니다. promise객체에는 abort(중단) 기능이 없기 때문에 'AbortController '를 이용하여 비동기식 동작중단 기능을 만들어보겠습니다.  
 이걸 왜 하냐면, 우리의 예제에 에러가 발생할 경우를 대비해서 .catch()문을 적어놓았습니다.  이것을 좀더 효과적으로 바꿔보자는 것입니다.  
 
