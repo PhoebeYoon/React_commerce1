@@ -14,30 +14,31 @@ useEffect hook의 2번째 매개변수는 hook가 실행되는 시기를 결정�
 내용을 삭제하면 이게 db.json에 반영되고 Home으로 돌아가게 하겠습니다.  
 fetch함수에서 메서드는 'DELETE' 입니다.   
 기억하실 것은 전에 db에 있는 id값으로 접근가능했던것을 기억하시죠. 그래서 아래와 같이 변경해주면 됩니다.  
+
+
 [BlogDetails.js] 
 
-
-``` javascript
-import { useParams } from "react-router-dom";
-import useFectch from "./useFetch";
-import { useNavigate } from 'react-router-dom';
+``` js
+import { useNavigate, useParams } from "react-router-dom";
+import useFetch from "./useFetch";
 
 const BlogDetails = () => {
-const { id } = useParams();
-const { error,isPendind,data:blog} = useFectch("http://localhost:8000/blogs/"+id);
-const history = useNavigate();
+  const { id } = useParams();
+  const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
+  const history = useNavigate();
 
-const handleClick=()=>{
-  fetch('http://localhost:8000/blogs/'+blog.id,{
-        method:"DELETE"}).then(()=>{
-        history('/')
-    })
-}
+  const handleClick = () => {
+    fetch('http://localhost:8000/blogs/' + blog.id, {
+      method: 'DELETE'}).then(() => {
+      history('/');
+    }) 
+  }
   return ( 
     <div className="blog-details">
+
       <h2>Blog-Details -{id} </h2>
-      { isPendind && <div>Loadig ... </div>} 
-      { error && <div> error</div>} 
+      { isPending && <div>Loadig ... </div>} 
+      { error && <div> ddderror</div>} 
       {blog  && ( 
       <article>  
         <h2>{blog.title}</h2> 
@@ -47,7 +48,7 @@ const handleClick=()=>{
     </div>
    );
 }
-export default BlogDetails
+export default BlogDetails;
 ```   
 
 
