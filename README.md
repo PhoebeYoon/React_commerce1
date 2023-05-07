@@ -15,6 +15,8 @@ prop(properties의 줄임말)와 state는 일반 자바스크립트 객체입니
 위의 내용을 그냥 읽어보십시요, 이제부터 왜 state를 사용하는지 설명하도록 하겠습니다.  
 
 우리는 ```  let name ='Hong Gi lDong';   ``` 를 설정한 뒤에 버튼을 클릭해서 name변수의 값을 'Kim Gil Dong'으로 변경할 것입니다.  아래의 코드를 보세요. ( 완성된 코드는 아닙니다 )  
+[Home.js]
+
 
 ``` javascript 
 const Home = () => {
