@@ -23,7 +23,7 @@
   - html에서 닫는 태그가 없는 태그일지라고 닫는태그를 작성해야 합니다. 예) ``` <input /> ```   
   - return ()  으로 사용하고 이안에서 최상의 태그는 하나만 적어줍니다  
   - {boolean}, {null}, {undefined }는 무시됩니다. 유효하지만 랜더링을 하지 않습니다  
-  - {showHeader && <Header />} 와 같은 표현에서 showHeader의 값이 true 이면 옆에 있는  ```<Header />```를 랜더링합니다  
+  - {showHeader && &lt;Header  / &gt;} 와 같은 표현에서 showHeader의 값이 true 이면 옆에 있는  ```<Header />```를 랜더링합니다  
   - false, true, null 또는 undefined와 같은 값들을 출력하고 싶다면 먼저 문자열로 전환 해야합니다.  
   ``` 
   <div>
