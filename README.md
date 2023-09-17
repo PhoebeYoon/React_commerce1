@@ -18,6 +18,8 @@ npm ERR! errno -13
 ``` npx create-react-app ./ ``` 를 했더니 제대로 npm이 설치된다
 
 ### ERROR in [eslint] EACCES: 
+> npm start  했더니 브라우저에 정상적인 화면이 안 나옴.
+> 
 아래와 같은 에러 발생.   
 ``` ERROR in [eslint] EACCES: permission denied, mkdir '/Users/kyeonghayun/Documents/Tutorials/React/23_09/node_modules/.cache ```  
 아래와 같이 입력햄.  
