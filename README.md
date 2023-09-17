@@ -16,3 +16,15 @@ npm ERR! errno -13
 ``` chown: /usr/local/: Operation not permitted 메시지가 나온다 ```
 그 후에  
 ``` npx create-react-app ./ ``` 를 했더니 제대로 npm이 설치된다
+
+### ERROR in [eslint] EACCES: 
+아래와 같은 에러 발생.   
+``` ERROR in [eslint] EACCES: permission denied, mkdir '/Users/kyeonghayun/Documents/Tutorials/React/23_09/node_modules/.cache ```  
+아래와 같이 입력햄.  
+```
+sudo chown -R $USER /Users/kyeonghayun/Documents/Tutorials/React/23_09/node_modules
+(뒷부분은 에러 메시지에 나온 경로이다 뒤에 /.cache  도 있었으나 이거 붙여있을때는 에러 또 나와서 빼고 했더니
+해결됨 
+맥에서의 권한 문제라고 해서 읽기/쓰기 하위폴더까지 권한 변경함 
+```    
+
