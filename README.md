@@ -1,36 +1,18 @@
 ###### 🌵 React_Tutorial_Part1
+ithubusercontent.com/48478079/226273705-08cf250d-7e7f-4656-8ea6-19d30f84e7aa.png">
 
-###### 💔 해당 게시물을 무단으로 도용하지 마세요    
+### Error -13
+```
+npm ERR! code EACCES
+npm ERR! syscall unlink
+npm ERR! path /Users/kyeonghayun/.npm/_cacache/index-v5/00/1c/3852e9de8342c89aa7665f32cf46d69374a39eaec366e29f7d48a1b03c95
+npm ERR! errno -13
+...
+```
+뭐 이런 에러가 났다. 멀쩡하게 실행되던 것인데 다른 프로젝트를 생성하고 react를 시도했더니
+에러가 났다. 여러 솔루션을 봤지만  
 
-
-## React - Wirte Less, Code More
-### (A javascript library for building User Interface) 
-
-
-### 이번수업을 통해 여러분은,
- - React 설치및 실행
- - 컴포넌트
- - style추가하기
- - Click 이벤트 
- - state
- - props
- - Hook만들기
- - json파일 다루기
- - fetch
- - Router
- - Link
- 등의 내용을 이용하여 아래와 같은 출력을 만들어보겠습니다.   
- ( 원활한 수업을 위해 Tailwind css 를 사용하도록 합니다 )
- 
- 
- 
- #### [ 결과화면1 ]    
- <img width="300" alt="스크린샷 2023-03-20 오후 4 25 10" src="https://user-images.githubusercontent.com/48478079/226273293-928f5d7e-be76-4571-a5d1-acb7968e7dba.png">
- 
-#### [ 결과화면2 ]
-<img width="300" alt="스크린샷 2023-03-20 오후 4 28 09" src="https://user-images.githubusercontent.com/48478079/226273705-08cf250d-7e7f-4656-8ea6-19d30f84e7aa.png">
-
-
-
-#### [ 결과화면3 ]    
-<img width="300" alt="스크린샷 2023-03-20 오후 4 25 19" src="https://user-images.githubusercontent.com/48478079/226273315-87070d4c-1cc8-4924-80e7-0938b0414a8d.png">
+``` sudo chown -R $USER /usr/local/ ``` 터미널에서 실행해서 sudo를 사용하지 않도록 했더니  
+``` chown: /usr/local/: Operation not permitted 메시지가 나온다 ```
+그 후에  
+``` npx create-react-app ./ ``` 를 했더니 제대로 npm이 설치된다
