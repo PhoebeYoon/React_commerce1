@@ -3,17 +3,23 @@
 수업을 진행하기 전에 Hook(React 16.8.0 버전부터) 과 useState 와 useEffect에 대해 간략히 살펴봅시다. (Hooks에는 여러가지가 있지만 우리는 useState와 useEffect에 대해서만 알아볼것입니다.)  
 우리는 이미 Hooks에 대한 체험이 있기때문에 그냥 문자로 읽었을때보다 좀더 이해할 수 있을 것입니다.   
 ## Hooks  
-우선 Hook은 Hooks이며 <b> 함수 </b> 입니다.    
+우선 Hook은 Hooks (훅 이라고 읽습니다 )이며 <b> 함수 </b> 입니다.    
 s가 붙여기 때문에 하나가 아니라 여러개라는 것을 짐작할 수 있습니다.  그리고 모든 함수에는 특정한 기능(코드)를 가지고 있듯이 이것도 그러합니다. 이 Hooks이라는 것이 뭐하냐면,   
 영어로는 'hook into '이고, 한글로 하면 '~에 연결하다'의 기능을 합니다.    
-즉 함수컴포넌트에서 리액트 state와 lifecycle에 관여하여 뭔가를 연결한다는 것이다.   
+간단히 말하면 2019년에 소개되었고, 기존의 복잡하고 애매한 부분을 없애고 정리한 새로운 개념입니다. 
+
 리액트는 빌트인 Hooks 함수들을 제공하는데 대표적인 것이 우리가 이미 사용해봤던 useEffect함수 와 useState 등입니다. 그리고 사용자가 직접 만드는 Hook도 있습니다.  <br> 
 
 Hook의 개념이 여전히 애매하다면 이렇게 생각해봅시다.  여러분은 이미 Math.random(), Math.floor() 함수를 사용해봤을것이다. 
  random(), floor()는 모두 Math라는 함수에 속합니다.  
- 이와같은 방식으로 Hooks라는 함수가 있는데 그것의 서브(?)함수로 useState와 useEffect가 있다고 생각하면 어떨까 싶습니다. 그리고 이것들은 리액트의 state와 관련되고 리액트의 lifecycle에서 사용한다고 생각하십시요.  <br>
- ( 그리고 자바스크립트의 배열구조분해(destructuring) 문법을 사용하니 혹시 이 구조에대해 익숙하지 않다면 먼저 학습이 필요합니다.)      
- 
+ 이와같은 방식으로 Hooks 이라는 것이 있는데 거기에 useState와 useEffect 외의 것들이 있다고 생각하면 어떨까 싶습니다. 그리고 이것들은 리액트의 state와 관련되고 리액트의 lifecycle에서 사용한다고 생각하십시요.  <br>
+
+_컴포넌트의 데이터를 관리하는 훅은 useMemo, useCallback, useState 가 있고_,  
+_컴포넌트의 생명 주기에 관련된 훅은 useEffect, useLayoutEffect_,  
+_컴포넌트의 메서드 호출은 useRef, useImperativeHandle_,   
+_컴포넌트 간의 정보공유는 useContext_ 가 있습니다.  
+
+ ( 그리고 자바스크립트의 배열구조분해(destructuring) 문법을 사용하니 혹시 이 구조에대해 익숙하지 않다면 먼저 학습이 필요합니다.)     
 
 그리고 Hooks를 사용할때는 규칙이 있습니다.    
 - 최고 레벨의 Hooks만 호출할 수 있으며 루프, 조건 또는 중첩 함수 내부의 Hooks 를 호출하면 안됩니다. 
