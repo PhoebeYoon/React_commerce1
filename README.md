@@ -90,7 +90,13 @@ function Car() {
 export default Car;
 
 ```
+## 에러가 있을 때 보세요  
 
 🌵 node.js 를 제거하고자 한다면 제어판 > 프로그램 삭제
+🌵 설치시에 >npx create-react-app ???  로 설치시도 했는데,  npm ERR! code ENOENT 어쩌구 저쩌구 하면서  C:\User\admin\AppData\Roaming\npm 이라고 나오면 이것은 해당 경로에 npm 이라는 폴더가 없어서 에러를 발생시켰다는 의미이다. 이때는 ``` npm install -g create-react-app ``` 실행하고 \AppData\Roaming 를 확인해보면 npm 폴더가 생성되어 있다.   
+🌵 윈도우의 AppData 폴더란?  사용자계정아래에 존재하며 각 사용자별 설정을 저장하는 폴더이다.   
+  - 📁 Roaming : pc가 회사, 공공기간에서 제공하는 도메인에 접속되어 있을때 사용자 계정으로 로밍할 수 있는 데이터가 존재하게 되며 구글등의 계정에 연결하여 관련설정등을 받아와서 처리해야 하는 경우 이곳에 저장하며 북마크, 검색한 데이터가 pc에서 pc로 이동한다.
+  - 📁 Local : 단일 컴퓨터의 특정한 데이터가 저장된다. 같은 계정으로 로그인할지라도 컴퓨터간에 공유되거나 동기화되지 않는 데이터등이 있다.
+  - 📁 LocalLow : Local 폴더와 비슷하지만 제한된 보안설정으로 실행되는 "low intergrity" 응용프로그램을 위해 존재한다
 
 
