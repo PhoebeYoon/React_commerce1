@@ -26,6 +26,17 @@ export default Home;
 
 이제 blogs에 들어 있는 항목을 하나씩 가져와서 title, body, author 순으로 출력해 보겠습니다.  
 blogs는 3개의 데이터를 모두 갖고 있는 변수이니 하나씩 가져오려면 따로 변수를 하나를 지정해야 겠지요 그래서 blog라고 하겠습니다. 그래서 코드는 아래와 같습니다.  return문만 바꿔주세요 
+```js
+return ( 
+    <div className="home">
+     {blogs}  <-- 이렇게 적으면 Objects are not valid 어쩌구 하면서 with keys{title, body, author,id} 뭐라고 적혀있다.
+              그리그 collection of children , use an array instead 라고 나온다.  핵심 단어만 알면 해결할 수 있다.
+              keys, children, array 그리고 {title, body, author,id} 
+    </div>
+);
+
+```
+
 
 ``` javascript
 return ( 
@@ -51,9 +62,9 @@ index.css의 내용을 추가해 주세요
   margin:20px 0;
   border-bottom:1px solid #fafafa;
 }
-.blog-preview:hover { 
-  box-shadow: 1px 3px 5px rgba(0,0,0, 0.1) ;}
-  .blog-preview h2 {
+.blog-preview:hover { box-shadow: 1px 3px 5px rgba(0,0,0, 0.1) ;}
+
+.blog-preview h2 {
     font-size: 20px;
     color:#f1356d;
     margin-bottom: 8px;
@@ -73,18 +84,19 @@ index.css의 내용을 추가해 주세요
 4. Home.js파일에는 아까 오려두기 했던 같은 곳에 ``` <BlogList />  ``` 를 입력하면 같은 파일 위쪽에 ``` import BlogList from "./BlogList"; ``` 이 자동으로 입력됩니다. 
 5. 여기까지 하면 에러가 발생합니다. 왜냐하면 blogs의 내용은 Home.js에 있는데 BlogList.js 파일에는 blogs의 내용이 없기 때문입니다. blogs의 내용을 BlogList.js에 전달해줘야 합니다.
 6. 그래서 여기서 그 유명한 props를 사용하면 되는 것입니다. Home.js 파일의 ``` <BlogList props={blogs}/> ``` 바꿔줍니다. 
-7. BlogList.js파일에서 ``` const BlogList() => { ```   에 Home.js에서 전해준 인자를 받아야 하니까 괄호안에 props라는 인자를 넣어줍니다.  blogs.map()의 내용은 잠시 주석처리하고 콘솔창에 출력해보십시오. blogs의 내용이 출력됩니다. 
-8. 콘솔창에  내용일 출력되었다고 props.author 나 props.title 뭐 이렇게 해주면 안됩니다. 왜냐하면 props는 blogs의 전체내용을 가지고 있는 것이고 title은 blogs의 개별 데이터의 속성이니까요
+7. BlogList.js파일에서 ``` const BlogList() => { ```   에 Home.js에서 전해준 인자를 받아야 하니까 괄호안에 item 인자를 넣어줍니다.  blogs.map()의 내용은 잠시 주석처리하고 콘솔창에 출력해보십시오. 
+8. 콘솔창에  내용이 출력되었다면 props.author 나 props.title 뭐 이렇게 해주면 안됩니다. 왜냐하면 item는 blogs의 전체내용을 가지고 있는 것이고 title은 blogs의 개별 데이터의 속성이니까요
 9. 좀 헷갈리기 쉬운 것을 콘솔창에서 확인하도록 하겠습니다. 아래의 코드를 실행시켜보세요   
 ``` javascript   
-const BlogList = (props) => {
-  const blogs = props.props;
-  console.log('props --> ' ,props)
-  console.log('props blogs -->' , blogs)
+const BlogList = (item) => {
+  const blogs = item.props;
+
+  console.log('item --> ' ,item)
+  console.log('item의 blogs -->' , blogs)
   return (  
     <div className="blog-list">
       {
-        blogs.map((blog)=> (
+        item.map((blog)=> (
           <p key={blog.id} > { blog.title }</p>
         ))
     }
@@ -102,9 +114,9 @@ export default BlogList;
 출력결과입니다.   
 이제 코드를 완성해보도록 하겠습니다.   
 ``` javascript 
-const BlogList = (props) => {
-  const blogs = props.props;
-  console.log(blogs)
+const BlogList = (item) => {
+  const blogs = item.props;
+  console.log(item)
   return ( 
     <div className="blog-list">
       { blogs.map((blog)=>(
@@ -120,10 +132,15 @@ export default BlogList;
 ```
 ## porps 더 알아보기
 [ Home.js ]
-```  <BlogList blogs={blogs} title="All Blogs"/>  ``` 를 추가합니다. BlogList 컴포넌트에 <b>blogs</b> 라는 이름으로 보내는 것입니다. 위에서 사용했던 pros가 아닙니다. 이 이름으로 유지하면 에러가 납니다.  그리고   
+```  <BlogList blogs={blogs} title="All Blogs"/>  ``` 를 추가합니다. 
+
+BlogList 컴포넌트에 <b>blogs</b> 라는 이름으로 보내는 것입니다. 위에서 사용했던 props가 아닙니다.  
+다시말해,  ```<BlogList data1={blogs} title="All Blogs"/> ``` 의 형태로 보냈다면 BlogList.js에서는
+const BlogList = ({data1, title})=>{  ... data1이라는 같은 이름을 사용해야 합니다. 왜냐면 data1의 이름으로 보내는 것이니까. 
+
+그리고   
 [ BlogList.js ]  
-console.log(props.title)    //에러발생    
-console.log(blogs.title)   
+ 
 console.log(title)  
 console.log(blogs) 를 추가한 후 결과를 확인해 봅니다.    
 
