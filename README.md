@@ -96,5 +96,26 @@ const handleDelete = (id)=>{
 }
 export default Home;
 
-```  
+```
+
+위의 내용이 살짝 이해하기 어렵다면 우선 변수의 이름을 바꾸어서 어떻게 연결되는지 확인해 보자.  
+
+```
+ <BlogList blogs={blogs} title="All Blogs!" handleRemove={handleDelete}/> 를 아래와 같이 바꾼다 
+ 1. <BlogList myContent={blogs} title="All Blogs!" handleRemove={handleDelete}/>
+
+
+BlogList.js 에서
+2. const BlogList = ({myContent , title, handleRemove}) => {  로 바꾸고
+3. { myContext.map((blog)=>( 으로 바꾼다
+
+```
+개발자도구를 확인해 보면 BlogList가 Home.js 파일의  ```<BlogList >``` 태그안에 들어가 있다.  
+이런식으로 이해하면 된다. 위에서 바꾼 이름이 트리거처럼 작동하여 {handleDelete} 함수를 부른다고.     
+
+BlogList.js에 있는 handleRemove가 실행되면 Home.js에 있는 같은 이름를 찾은 다음  이게 마치 다시 트리거처럼 작동하여 handleDelete 함수를 실행하도록 한다.
+결국은 이게 라디오는 송신과 수신기처럼 작동하는 것이다. BlogList.js 의 handleRemove가 송신을 보내면 Home.js 에 있는 handleRemove가 수신하여 여기에 정의된 어떤 기능을 하는 거라고.   
+
+
+
 
