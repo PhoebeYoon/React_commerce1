@@ -44,7 +44,7 @@ const handleDelete = (id)=>{
 BlogList.js파일에 콘솔로 ```  console.log(title, handleDelete)  ``` 를 출력해보면 Home.js에서 정의한 함수내용이 출력됩니다.  
 완성된 코드에서 보면 handleRemove속성의 값으로 함수 handleDelete가 전달되는 것을 알 수 있습니다.   
 
-여기까지의 내용은 Home.js 파일에서 실행하면 됩니다. 이제 아래와 같이 파일을 따로 작성하여 실행해 봅시다.  
+__여기까지의 내용은 Home.js 파일에서 실행하면 됩니다. 이제 아래와 같이 파일을 따로 작성하여 실행해 봅시다.__  
 
 
 
