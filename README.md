@@ -62,13 +62,15 @@ export default Home;
 
 자 여기까지 이해가 되셨다면 하나 더 추가하도록 하겠습니다.  아래와 같이 변경해 주세요. 
 
-``` javascript  
+
+
+[변경됨]  
+```javascript  
  const handleClick2 =(name,e)=>{
-    console.log('Hello ' + name, e.target)
+    console.log('Hello ' + name, e)
   }
   
-<button onClick={(e)=>{
-          handleClick2('Hong',e)
+<button onClick={(event)=>{
+          handleClick2('Hong',event)
       }}>Click here</button>
-
-```   
+```
