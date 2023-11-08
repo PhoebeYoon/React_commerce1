@@ -29,7 +29,11 @@
   <div>
   My JavaScript variable is {String(myVariable)}.
 </div>
-```  
+```
+
+>자동으로 태그를 입력하려면 vs code  하단에 Ln Col Space:4 UTF-8 이렇게 나오는 줄에 'javascript'가 있을 것입니다. 이 javascript 글자를 클릭하면 에디터 위쪽에 드롭다운이 나타납니다. 그러면 javascript JSX ( javascriptreact) 를 선택하면 됩니다
+
+
 
 이전 수업에서 웹브라우저의 개발자도구와 vscode로 App.js 내용을 비교한 그림, 기억나시나요?   
 #### 거기에 보면 App.js에는 ``` <div className="App"> ~ ``` 로 되어 있는데 개발자도구에는 ``` <div class="App"> ~ ``` 로 되어 있었습니다. jsx 문법에 따라 className이라고 했는데 실제 브라우저의 DOM으로 랜더링해서 보니 class로 변경되어 html 문법에 맞춰서 들어가 있었습니다.  
