@@ -114,7 +114,9 @@ BlogList.js 에서
 이런식으로 이해하면 된다. 위에서 바꾼 이름이 트리거처럼 작동하여 {handleDelete} 함수를 부른다고.     
 
 BlogList.js에 있는 handleRemove가 실행되면 Home.js에 있는 같은 이름를 찾은 다음  이게 마치 다시 트리거처럼 작동하여 handleDelete 함수를 실행하도록 한다.
-결국은 이게 라디오는 송신과 수신기처럼 작동하는 것이다. BlogList.js 의 handleRemove가 송신을 보내면 Home.js 에 있는 handleRemove가 수신하여 여기에 정의된 어떤 기능을 하는 거라고.   
+
+**마치 라디오는 송신과 수신기처럼 작동하는 것이다. BlogList.js 의 handleRemove가 송신을 보내면 Home.js 에 있는 handleRemove가 수신하여 여기에 정의된 어떤 기능을 하는 거라고.**
+
 
 
 
