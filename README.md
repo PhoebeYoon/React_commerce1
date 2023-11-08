@@ -21,7 +21,10 @@ const Home = () => {
 }
 export default Home;
 
-```   
+```
+map()으로 내용을 접근하기전, blogs[0].title 로 내용을 가져올 수 있다.   
+
+
 콘솔창에 '+'기호가 3개 찍히는지 확인하세요.  
 
 이제 blogs에 들어 있는 항목을 하나씩 가져와서 title, body, author 순으로 출력해 보겠습니다.  
