@@ -23,7 +23,7 @@ const handleDelete=()=>{
 
 이와 같이 해야합니다. 이 내용에서 클릭이벤트가 일어난 개별 blog( blogs 안에 개별 blog)를 삭제하려면 각 blog의 유일한 key값을 넘겨서 해당하는 것을 blogs에서 찾아서 삭제해야 합니다. 그래서  
 ``` javascript
-<button onClick={ ()=>{ handleDelete(blog.id, blog)}}>Delete</button> 
+<button onClick={ ()=>{ handleDelete(blog.id, blog)}}>Delete</button>  
 ```    
 handleDelete()에 id와 blog내용을 매개변수로 넘겨서 해당 내용을 접근할 수는 있습니다. 
 ``` javascript
