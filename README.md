@@ -57,7 +57,7 @@ return문 전에 변수를 선언합니다.
 ``` javascript 
 import './App.css';
 function App() {
-  const title ="Welcome to the my blog";
+  const title ="Welcome to my blog";
   return (
     <div className="App">
       <div className="content">
