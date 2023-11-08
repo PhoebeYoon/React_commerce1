@@ -45,7 +45,7 @@ return (
 return ( 
     <div className="home">
       {
-      blogs.map((blog) => (
+      blogs.map((blog) => (  // 괄호이지 {  } 컬리브리켓이 아니다. 여기 ( )는 없어도 된다 
         <div className="blog-preview" key={blog.id}> 
           <h2>{blog.title}</h2>
           <p>{blog.body}</p>
