@@ -21,9 +21,9 @@ useEffect(()=>{
 
  return ( 
   <div className="home">
-      <BlogList blogs={blogs} title="All Blogs!" handleRemove={handleDelete}/>
-      <button onClick={()=>setName('Smith')}> Change Name</button>
-      <p>{name}</p>
+     <BlogList blogs={blogs} title="All Blogs!" handleRemove={handleDelete}/>
+     <button onClick={()=>setName('Smith')}> Change Name</button>
+     <p>{name}</p>
   </div>
  );
 }
