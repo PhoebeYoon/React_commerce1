@@ -96,7 +96,7 @@ const Home = () => {
   <div className="home">
  
     {error && <div> {error} </div>}
-    {isPending && <div>Loading... </div>}
+    {isPending && <div>Loading... </div>}  // 에러가 났다면 Loading... 더이상 출력되지 않도록   
     { blogs && <BlogList blogs={blogs} title="All Blogs!" /> }
   </div>
  );
