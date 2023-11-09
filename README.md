@@ -109,7 +109,8 @@ const Create = () => {
     }).then( ()=>{
       console.log("Added new blog")
       setPending(false);
-      history('/create')
+      history('/create')  <-- 폼태그에서 내용을 삽입한 후 Submit 를 시켜도 브라우저화면은 /create 페이지에 머물러 있지만
+                              만약  history('/') 이라고 한다면 Submit 로 브라우저 화면은 Home 화면으로 자동이동한다 
     })
   }
 
