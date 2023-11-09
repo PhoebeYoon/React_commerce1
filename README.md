@@ -45,9 +45,11 @@ function Example() {
     </div>
   );
 }
-```    
-위의 내용는 useState의 예시코드입니다. 1번과 2번이 중요합니다.   
-React에서 함수 컴포넌트는 2가지 모양을 가집니다  
+export default Example;  
+```
+
+위의 내용는 useState의 예시코드입니다. 1번과 2번이 중요합니다.  (코드사용시에는 // 제거)      
+React에서 함수 컴포넌트는 2가지 모양을 가집니다. 위와 아래
 ```js
 const Example = (props) => {
   // 여기서 Hook을 사용할 수 있습니다!
