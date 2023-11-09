@@ -18,3 +18,31 @@ const StateTuts3= ()=>{
   )
 }
 export default StateTuts3; 
+
+
+또는 -------------------------------------------------
+
+ import { useState } from 'react';
+const Exmaple = () => {
+ const [count, setCount ] = useState(100);
+  const [showText , setshowText] = useState(false)
+
+  const newCountFun =() =>{
+    console.log(count-1)
+     setCount(count-1);
+    }
+return (  
+    <div>
+      <h1>{count}</h1>
+      <div>
+       { !showText && <p> This is text.</p>}</div>
+      <button onClick={newCountFun}> 1씩빼기</button>
+     
+    </div>
+    );
+}
+ 
+export default StateTuts3;
+
+
+  
