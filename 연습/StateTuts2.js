@@ -20,7 +20,8 @@ export default StateTuts2;
 
 let changeContent =(event) =>{   대신 아래와 같이 사용해 볼 수 있다 
 
-function changeContent(){
+function changeContent(event){
+  console.log(event.target.value)
   let newValue = event.target.value
   setInputValue(newValue)
  }
