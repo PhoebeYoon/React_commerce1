@@ -69,6 +69,8 @@ const Create = () => {
   );
 }
 
+export default Create;
+
 ``` 
 
 ## useNavigate 사용하기 (useHistory 대신 )
