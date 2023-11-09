@@ -9,10 +9,12 @@ React Router는 클라이언측 라우팅을 가능하게 합니다. 이게 뭐�
 <b>컴포넌트를 요청주소에 따라서 연결될 수 있도록 Route요소를 사용하는 것입니다</b>     
 
 
-먼저 rounter 기능을 사용하려면 해당 기능을 설치해야 합니다.   특정버전을 원한다면 dom글자위에  @특정버전를 추가합니다.   
+먼저 rounter 기능을 사용하려면 해당 기능을 설치해야 합니다.   특정버전을 원한다면 dom글자위에  @특정버전를 추가합니다.    
+
 ```> npm install react-router-dom``` 이렇게 하면 됩니다 (npx로 사용하지 마세요)      
 설치후에 package.json파일을 열어보면  
 "dependencies" 항목에 "react-router-dom": "숫자"가 있을 것입니다.   
+
 
 ### App.js의 내용에 등록하기
 react-router-dom 설치가 되었다면 사용하기 위해 App.js에 이것을 사용하겠다고 등록(불러옴)해야 합니다. 
