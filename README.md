@@ -23,7 +23,7 @@ const BlogDetails = () => {
   const { data: blog, error, isPending } = useFetch('http://localhost:8000/blogs/' + id);
   const history = useNavigate();
 
-  const handleClick = () => {
+  const handleRemove = () => {
     fetch('http://localhost:8000/blogs/' + blog.id, {
       method: 'DELETE'}).then(() => {
       history('/');
@@ -39,7 +39,7 @@ const BlogDetails = () => {
       <article>  
         <h2>{blog.title}</h2> 
         <div>{blog.body}</div>
-        <button onClick={handleClick}>Delete</button>
+        <button onClick={handleRemove}>Delete</button>
       </article>)}
     </div>
    );
