@@ -15,3 +15,15 @@ const StateTuts2 = ()=>{
   )
 }
 export default StateTuts2;  
+
+또는  -------------
+
+let changeContent =(event) =>{   대신 아래와 같이 사용해 볼 수 있다 
+
+function changeContent(){
+  let newValue = event.target.value
+  setInputValue(newValue)
+ }
+
+ 이것을 그냥 연습을 하기 위한것이고 위의 방법으로 사용하는 것이 좋다.  
+  
