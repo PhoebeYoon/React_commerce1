@@ -18,6 +18,7 @@ Route에서 Key를 지정해주고, 해당 Key에 Value를 넣어 url를 완성�
 ``` javascript
 import { useParams } from "react-router-dom";
 
+
 const BlogsDetails = () => {
   const { id } = useParams()
   return ( 
