@@ -18,16 +18,16 @@ Route에서 Key를 지정해주고, 해당 Key에 Value를 넣어 url를 완성�
 ``` javascript
 import { useParams } from "react-router-dom";
 
-const BlogDetails = () => {
+const BlogsDetails = () => {
   const { id } = useParams()
   return ( 
     <div className="blog-details">
-      <h2>Blog-Details -{id} </h2>
+      <h2>Blogs-Details -{id} </h2>
 
     </div>
    );
 }
-export default BlogDetails;
+export default BlogsDetails;
 
 ```  
 그리고 Route를 사용하는 파일은?  App.js에 그 내용이 있으니 그 파일에 추가해보도록 하겠습니다.  
