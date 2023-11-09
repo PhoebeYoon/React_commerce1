@@ -11,6 +11,8 @@ const { error,isPendind,data:blog} = useFectch("http://localhost:8000/blogs/"+id
 그리고 이 내용을 콘솔창에 출력해보면 해당 내용들이 나옵니다. 그런데 실습할때 내용이 보여야 하는 페이지는 BlogsDetails 파일이니 Home에서 출력된 리스트중에 하나를 선택해야만 하겠지요? 
 그리고 아래와 같이 변경해 주면 됩니다.   
 
+> json 서버가 작동할때 브라우저 주소창에 http://localhost:8000/blogs/2 라고 적으면 id가 2인 내용만 출력된다. 아래의 useFetch(주소 + id)와 같은 형식이다.  
+
 [BlogsDetails.js]   
 ``` javascript
 import { useParams } from "react-router-dom";
