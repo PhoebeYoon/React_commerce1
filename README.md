@@ -5,10 +5,11 @@
 
 ## error 4058
 시도해 보기   
-package.json이 있는 폴더에서 npm start 엔터   
-vs code 닫고 > clear npm cache by npm cache clear --force    > vs code 재실행    
-npm audit --force     
-mkdir C:\Users\<UserName>\AppData\Roaming\npm
+- npm init 엔터 
+- package.json이 있는 폴더에서 npm start 엔터   
+- vs code 닫고 > clear npm cache by npm cache clear --force    > vs code 재실행    
+- npm audit --force     
+- mkdir C:\Users\<UserName>\AppData\Roaming\npm
 
 npm audit 에 대해  
 https://medium.com/humanscape-tech/%EB%AA%A8%EB%93%88-%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%84-%EC%A0%90%EA%B2%80%ED%95%98%EC%9E%90-npm-audit-6470957c2c3b
