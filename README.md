@@ -16,3 +16,12 @@ https://medium.com/humanscape-tech/%EB%AA%A8%EB%93%88-%EC%B7%A8%EC%95%BD%EC%A0%9
 
 
 최신버전으로 npm install -g npm@latest    
+
+
+### 전역설치시 경로
+📁 window   
+%USERPROFILE%\AppData\Roaming\npm\node_modules
+
+
+📁 mac   
+/usr/local/lib/node_modules
