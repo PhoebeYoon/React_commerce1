@@ -3,34 +3,15 @@
 ###### 💔 해당 게시물을 무단으로 도용하지 마세요    
 
 
-## React - Wirte Less, Code More
-### (A javascript library for building User Interface) 
+## error 4058
+시도해 보기   
+package.json이 있는 폴더에서 npm start 엔터   
+vs code 닫고 > clear npm cache by npm cache clear --force    > vs code 재실행    
+npm audit --force     
+mkdir C:\Users\<UserName>\AppData\Roaming\npm
+
+npm audit 에 대해  
+https://medium.com/humanscape-tech/%EB%AA%A8%EB%93%88-%EC%B7%A8%EC%95%BD%EC%A0%90%EC%9D%84-%EC%A0%90%EA%B2%80%ED%95%98%EC%9E%90-npm-audit-6470957c2c3b
 
 
-### 이번수업을 통해 여러분은,
- - React 설치및 실행
- - 컴포넌트
- - style추가하기
- - Click 이벤트 
- - state
- - props
- - Hook만들기
- - json파일 다루기
- - fetch
- - Router
- - Link
- 등의 내용을 이용하여 아래와 같은 출력을 만들어보겠습니다.   
- ( 원활한 수업을 위해 Tailwind css 를 사용하도록 합니다 )
- 
- 
- 
- #### [ 결과화면1 ]    
- <img width="300" alt="스크린샷 2023-03-20 오후 4 25 10" src="https://user-images.githubusercontent.com/48478079/226273293-928f5d7e-be76-4571-a5d1-acb7968e7dba.png">
- 
-#### [ 결과화면2 ]
-<img width="300" alt="스크린샷 2023-03-20 오후 4 28 09" src="https://user-images.githubusercontent.com/48478079/226273705-08cf250d-7e7f-4656-8ea6-19d30f84e7aa.png">
-
-
-
-#### [ 결과화면3 ]    
-<img width="300" alt="스크린샷 2023-03-20 오후 4 25 19" src="https://user-images.githubusercontent.com/48478079/226273315-87070d4c-1cc8-4924-80e7-0938b0414a8d.png">
+최신버전으로 npm install -g npm@latest    
