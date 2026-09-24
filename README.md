@@ -3,7 +3,7 @@
 ###### 💔 해당 게시물을 무단으로 도용하지 마세요    
 
 
-## React - Wirte Less, Code More
+## React - Write Less, Code More
 ### (A javascript library for building User Interface) 
 
 
